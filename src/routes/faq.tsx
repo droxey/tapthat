@@ -2,8 +2,19 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { faqs, BRAND } from "@/lib/catalog";
+import { socialHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/faq")({ component: FaqPage });
+export const Route = createFileRoute("/faq")({
+  head: () =>
+    socialHead({
+      title: `FAQ | ${BRAND.name}`,
+      description: "Answers about charms, scanning, shipping, and privacy.",
+      path: "/faq",
+      image: "/images/tap.jpg",
+      imageAlt: "Tapping a TapThat charm",
+    }),
+  component: FaqPage,
+});
 
 function FaqPage() {
   return (

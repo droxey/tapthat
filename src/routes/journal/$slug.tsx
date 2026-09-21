@@ -1,7 +1,28 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { postBySlug } from "@/lib/catalog";
+import { BRAND, postBySlug } from "@/lib/catalog";
+import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/journal/$slug")({ component: PostPage });
+export const Route = createFileRoute("/journal/$slug")({
+  head: ({ params }) => {
+    const post = postBySlug(params.slug);
+    if (!post) {
+      return socialHead({
+        title: `Not found | ${BRAND.name}`,
+        description: DEFAULT_DESCRIPTION,
+        path: `/journal/${params.slug}`,
+      });
+    }
+    return socialHead({
+      title: `${post.title} | ${BRAND.name}`,
+      description: post.dek,
+      path: `/journal/${post.slug}`,
+      image: post.image,
+      imageAlt: post.title,
+      type: "article",
+    });
+  },
+  component: PostPage,
+});
 
 function PostPage() {
   const { slug } = Route.useParams();
