@@ -169,8 +169,6 @@ export const NAV = [
   { to: "/app", label: "App" },
   { to: "/how-it-works", label: "Wut?" },
   { to: "/faq", label: "FAQ" },
-  { to: "/partners", label: "Pineapples" },
-
   { to: "/squad", label: "Squad" },
 ] as const;
 

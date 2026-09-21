@@ -29,9 +29,6 @@ export function SiteFooter() {
           <Link to="/faq" className="hover:underline">
             FAQ
           </Link>
-          <Link to="/partners" className="hover:underline">
-            Pineapples
-          </Link>
           <Link to="/squad" className="hover:underline">
             Squad
           </Link>

@@ -1,7 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { ProductCard } from "@/components/product-card";
-import { products } from "@/lib/catalog";
+import { BRAND, products } from "@/lib/catalog";
 
 type ShopSearch = { q?: string };
 
@@ -53,10 +53,9 @@ function Shop() {
         <div className="rounded-base border-2 border-border bg-main p-6 shadow-shadow">
           <h2 className="text-xl font-bold">Let’s partner</h2>
           <p className="mt-2 text-sm">Events, brands, artists. Drop a line and we’ll find the form factor.</p>
-          <Link to="/partners" className="mt-3 inline-block text-sm font-bold underline">
-            Partners in Pineapples
-
-          </Link>
+          <a href={`mailto:${BRAND.email}`} className="mt-3 inline-block text-sm font-bold underline">
+            {BRAND.email}
+          </a>
         </div>
       </section>
     </main>
