@@ -24,7 +24,7 @@ Nav clone: Shop · App · Wut? · FAQ · Partner · Squad
 
 ## Product catalog mapped
 
-Glo Ghost → Afters Fans; Heart Hands kept; PLUR → LIVE; Unicorn → Pearlshift; 3/5/10 packs; bracelets; limited bucket hat (sold out). Prices preserved from archive.
+Glo Ghost → Fan Charms; Heart Hands kept; PLUR → LIVE; Unicorn → Pearlshift; 3/5/10 packs; bracelets; limited bucket hat (sold out). Prices preserved from archive.
 
 ## App slice (demo, auth off)
 

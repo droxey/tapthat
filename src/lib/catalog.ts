@@ -88,7 +88,7 @@ export const NAV = [
 export const products: Product[] = [
   {
     slug: "afters-fans",
-    name: "Pool Fans Charms",
+    name: "Fan Charms",
 
     price: 1650,
     compareAt: 4950,
