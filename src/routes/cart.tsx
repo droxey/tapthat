@@ -4,11 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cartCount, cartSubtotal, parseQtyInput, useCart } from "@/lib/cart";
-import { productBySlug } from "@/lib/catalog";
+import { BRAND, productBySlug } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
+import { socialHead } from "@/lib/seo";
 import { formatMoney } from "@/lib/utils";
 
-export const Route = createFileRoute("/cart")({ component: Cart });
+export const Route = createFileRoute("/cart")({
+  head: () =>
+    socialHead({
+      title: `Bag | ${BRAND.name}`,
+      description: "Your TapThat bag — enamel NFC charms ready to trade.",
+      path: "/cart",
+      image: "/products/pack-3.jpg",
+      imageAlt: "TapThat shopping bag",
+    }),
+  component: Cart,
+});
 
 function Cart() {
   const { lines, setQty, remove, clear } = useCart();
