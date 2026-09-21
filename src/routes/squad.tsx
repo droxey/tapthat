@@ -5,8 +5,20 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ambassadors, BRAND } from "@/lib/catalog";
+import { socialHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/squad")({ component: Squad });
+export const Route = createFileRoute("/squad")({
+  head: () =>
+    socialHead({
+      title: `The Squad | ${BRAND.name}`,
+      description:
+        "Not an influencer grid. A short list of fans who trade in public, write what happened, and send the charm on.",
+      path: "/squad",
+      image: ambassadors[0]?.avatar ?? "/people/mina.jpg",
+      imageAlt: "TapThat Squad ambassadors",
+    }),
+  component: Squad,
+});
 
 function Squad() {
   const [sent, setSent] = useState(false);

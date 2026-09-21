@@ -5,8 +5,19 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { BRAND } from "@/lib/catalog";
+import { socialHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/contact")({ component: Contact });
+export const Route = createFileRoute("/contact")({
+  head: () =>
+    socialHead({
+      title: `Contact | ${BRAND.name}`,
+      description: `Support, press, and everything else: ${BRAND.email}`,
+      path: "/contact",
+      image: "/images/hero.jpg",
+      imageAlt: "Contact TapThat",
+    }),
+  component: Contact,
+});
 
 function Contact() {
   const [sent, setSent] = useState(false);

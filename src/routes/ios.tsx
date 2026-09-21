@@ -1,7 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { BRAND } from "@/lib/catalog";
+import { socialHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/ios")({ component: Ios });
+export const Route = createFileRoute("/ios")({
+  head: () =>
+    socialHead({
+      title: `TapThat for iPhone | ${BRAND.name}`,
+      description:
+        "Store memories in the charm, follow what you traded, and keep a social card on every tap.",
+      path: "/ios",
+      image: "/images/scan.jpg",
+      imageAlt: "TapThat for iPhone",
+    }),
+  component: Ios,
+});
 
 const features = [
   {
