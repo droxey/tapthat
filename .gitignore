@@ -1,1 +1,20 @@
+# Vercel / Grok sandbox
 .vercel/output/
+.node_modules.lock
+
+# Generated / local
+node_modules/
+dist/
+.output/
+artifacts/
+.grok/preview.log
+.grok/status
+
+# Env (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+*.swp
