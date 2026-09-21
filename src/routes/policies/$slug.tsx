@@ -1,6 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { BRAND } from "@/lib/catalog";
-import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, notFoundTitle, pageTitle, socialHead } from "@/lib/seo";
 
 const pages: Record<string, { title: string; body: string[] }> = {
   privacy: {
@@ -34,13 +34,13 @@ export const Route = createFileRoute("/policies/$slug")({
     const page = pages[params.slug];
     if (!page) {
       return socialHead({
-        title: `Not found | ${BRAND.name}`,
+        title: notFoundTitle(),
         description: DEFAULT_DESCRIPTION,
         path: `/policies/${params.slug}`,
       });
     }
     return socialHead({
-      title: `${page.title} | ${BRAND.name}`,
+      title: pageTitle(page.title),
       description: page.body[0] ?? DEFAULT_DESCRIPTION,
       path: `/policies/${params.slug}`,
       image: "/og.jpg",

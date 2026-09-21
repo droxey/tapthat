@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { BRAND, charmById, memoriesFor } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
-import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, pageTitle, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/app/$charmId")({
   validateSearch: (s: Record<string, unknown>): { tap?: boolean } =>
@@ -16,13 +16,13 @@ export const Route = createFileRoute("/app/$charmId")({
     const charm = charmById(params.charmId);
     if (!charm) {
       return socialHead({
-        title: `Charm not found | ${BRAND.name}`,
+        title: pageTitle("Charm not found"),
         description: DEFAULT_DESCRIPTION,
         path: `/app/${params.charmId}`,
       });
     }
     return socialHead({
-      title: `${charm.name} · ${charm.code} | ${BRAND.name}`,
+      title: pageTitle(`${charm.name} · ${charm.code}`, charm.origin),
       description: `${charm.origin}. ${charm.holders} holders, ${charm.events} events. ${charm.visibility} journey.`,
       path: `/app/${charm.id}`,
       image: charm.image,

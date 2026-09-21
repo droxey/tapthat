@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BRAND, posts } from "@/lib/catalog";
-import { socialHead } from "@/lib/seo";
+import { pageTitle, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/journal/")({
   head: () =>
     socialHead({
-      title: `Journal | ${BRAND.name}`,
+      title: pageTitle("Journal", "notes from the floor"),
       description: "Notes from the floor, the squad, and the shop.",
       path: "/journal",
       image: posts[0]?.image ?? "/images/hero.jpg",

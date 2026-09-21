@@ -5,12 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { BRAND } from "@/lib/catalog";
-import { socialHead } from "@/lib/seo";
+import { pageTitle, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   head: () =>
     socialHead({
-      title: `Contact | ${BRAND.name}`,
+      title: pageTitle("Contact", "support, press, partners"),
       description: `Support, press, and everything else: ${BRAND.email}`,
       path: "/contact",
       image: "/images/hero.jpg",

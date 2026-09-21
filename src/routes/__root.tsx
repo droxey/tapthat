@@ -4,17 +4,13 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { BRAND } from "@/lib/catalog";
-import {
-  DEFAULT_DESCRIPTION,
-  DEFAULT_OG_TITLE,
-  socialHead,
-} from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, DEFAULT_OG_TITLE, HOME_TITLE, socialHead } from "@/lib/seo";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
   head: () => {
     const social = socialHead({
-      title: BRAND.name,
+      title: HOME_TITLE,
       shareTitle: DEFAULT_OG_TITLE,
       description: DEFAULT_DESCRIPTION,
       path: "/",

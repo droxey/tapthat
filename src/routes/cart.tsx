@@ -6,13 +6,13 @@ import { Label } from "@/components/ui/label";
 import { cartCount, cartSubtotal, parseQtyInput, useCart } from "@/lib/cart";
 import { BRAND, productBySlug } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
-import { socialHead } from "@/lib/seo";
+import { pageTitle, socialHead } from "@/lib/seo";
 import { formatMoney } from "@/lib/utils";
 
 export const Route = createFileRoute("/cart")({
   head: () =>
     socialHead({
-      title: `Bag | ${BRAND.name}`,
+      title: pageTitle("Your bag"),
       description: "Your TapThat bag. Enamel charms ready to trade.",
       path: "/cart",
       image: "/products/pack-3.jpg",
