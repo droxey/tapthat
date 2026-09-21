@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ProductCard } from "@/components/product-card";
 import { BRAND, productBySlug, relatedProducts } from "@/lib/catalog";
-import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, notFoundTitle, pageTitle, socialHead } from "@/lib/seo";
 import { useCart } from "@/lib/cart";
 import { formatMoney } from "@/lib/utils";
 
@@ -13,13 +13,13 @@ export const Route = createFileRoute("/shop/$slug")({
     const product = productBySlug(params.slug);
     if (!product) {
       return socialHead({
-        title: `Not found | ${BRAND.name}`,
+        title: notFoundTitle(),
         description: DEFAULT_DESCRIPTION,
         path: `/shop/${params.slug}`,
       });
     }
     return socialHead({
-      title: `${product.name} | ${BRAND.name}`,
+      title: pageTitle(product.name, product.category === "packs" ? "charm pack" : product.category === "wear" ? "wearable" : product.category === "merch" ? "merch" : "NFC charm"),
       description: product.blurb,
       path: `/shop/${product.slug}`,
       image: product.image,

@@ -6,12 +6,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { BRAND, charms, floorMemories, isCharmPublic } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
-import { socialHead } from "@/lib/seo";
+import { pageTitle, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/app/")({
   head: () =>
     socialHead({
-      title: `App | ${BRAND.name}`,
+      title: pageTitle("The floor", "charms, journeys, social cards"),
       description: "Open charms, follow journeys, and leave the next moment on the floor.",
       path: "/app",
       image: "/images/afters.jpg",

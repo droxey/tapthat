@@ -1,19 +1,19 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { BRAND, postBySlug } from "@/lib/catalog";
-import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, notFoundTitle, pageTitle, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/journal/$slug")({
   head: ({ params }) => {
     const post = postBySlug(params.slug);
     if (!post) {
       return socialHead({
-        title: `Not found | ${BRAND.name}`,
+        title: notFoundTitle(),
         description: DEFAULT_DESCRIPTION,
         path: `/journal/${params.slug}`,
       });
     }
     return socialHead({
-      title: `${post.title} | ${BRAND.name}`,
+      title: pageTitle(post.title, "Journal"),
       description: post.dek,
       path: `/journal/${post.slug}`,
       image: post.image,

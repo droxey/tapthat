@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { ProductCard } from "@/components/product-card";
 import { BRAND, products } from "@/lib/catalog";
-import { socialHead } from "@/lib/seo";
+import { pageTitle, socialHead } from "@/lib/seo";
 
 type ShopSearch = { q?: string };
 
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/shop/")({
   }),
   head: () =>
     socialHead({
-      title: `Shop | ${BRAND.name}`,
+      title: pageTitle("Shop", "NFC charms, packs, and wear"),
       description: SHOP_DESCRIPTION,
       path: "/shop",
       image: "/products/pack-10.jpg",

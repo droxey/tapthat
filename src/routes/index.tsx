@@ -3,13 +3,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/product-card";
 import { BRAND, events, faqs, howSteps, products } from "@/lib/catalog";
-import { DEFAULT_DESCRIPTION, DEFAULT_OG_TITLE, socialHead } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, DEFAULT_OG_TITLE, HOME_TITLE, socialHead } from "@/lib/seo";
 import { formatMoney } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
   head: () =>
     socialHead({
-      title: BRAND.name,
+      title: HOME_TITLE,
       shareTitle: DEFAULT_OG_TITLE,
       description: DEFAULT_DESCRIPTION,
       path: "/",

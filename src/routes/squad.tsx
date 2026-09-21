@@ -5,12 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ambassadors, BRAND } from "@/lib/catalog";
-import { socialHead } from "@/lib/seo";
+import { pageTitle, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/squad")({
   head: () =>
     socialHead({
-      title: `The Squad | ${BRAND.name}`,
+      title: pageTitle("The Squad", "ambassadors who actually go out"),
       description:
         "Not an influencer grid. A short list of fans who trade in public, write what happened, and send the charm on.",
       path: "/squad",
