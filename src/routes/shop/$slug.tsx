@@ -3,11 +3,30 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ProductCard } from "@/components/product-card";
-import { productBySlug, relatedProducts } from "@/lib/catalog";
+import { BRAND, productBySlug, relatedProducts } from "@/lib/catalog";
+import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
 import { useCart } from "@/lib/cart";
 import { formatMoney } from "@/lib/utils";
 
 export const Route = createFileRoute("/shop/$slug")({
+  head: ({ params }) => {
+    const product = productBySlug(params.slug);
+    if (!product) {
+      return socialHead({
+        title: `Not found | ${BRAND.name}`,
+        description: DEFAULT_DESCRIPTION,
+        path: `/shop/${params.slug}`,
+      });
+    }
+    return socialHead({
+      title: `${product.name} | ${BRAND.name}`,
+      description: product.blurb,
+      path: `/shop/${product.slug}`,
+      image: product.image,
+      imageAlt: product.name,
+      type: "product",
+    });
+  },
   component: ProductPage,
 });
 
