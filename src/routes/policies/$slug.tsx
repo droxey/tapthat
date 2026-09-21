@@ -1,5 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { BRAND } from "@/lib/catalog";
+import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
 
 const pages: Record<string, { title: string; body: string[] }> = {
   privacy: {
@@ -27,7 +28,27 @@ const pages: Record<string, { title: string; body: string[] }> = {
   },
 };
 
-export const Route = createFileRoute("/policies/$slug")({ component: Policy });
+
+export const Route = createFileRoute("/policies/$slug")({
+  head: ({ params }) => {
+    const page = pages[params.slug];
+    if (!page) {
+      return socialHead({
+        title: `Not found | ${BRAND.name}`,
+        description: DEFAULT_DESCRIPTION,
+        path: `/policies/${params.slug}`,
+      });
+    }
+    return socialHead({
+      title: `${page.title} | ${BRAND.name}`,
+      description: page.body[0] ?? DEFAULT_DESCRIPTION,
+      path: `/policies/${params.slug}`,
+      image: "/og.jpg",
+      imageAlt: page.title,
+    });
+  },
+  component: Policy,
+});
 
 function Policy() {
   const { slug } = Route.useParams();

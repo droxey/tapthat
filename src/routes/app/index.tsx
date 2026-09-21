@@ -4,10 +4,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { charms, floorMemories, isCharmPublic } from "@/lib/catalog";
+import { BRAND, charms, floorMemories, isCharmPublic } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
+import { socialHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/app/")({ component: AppHome });
+export const Route = createFileRoute("/app/")({
+  head: () =>
+    socialHead({
+      title: `App | ${BRAND.name}`,
+      description: "Open charms, follow journeys, and leave the next moment on the floor.",
+      path: "/app",
+      image: "/images/afters.jpg",
+      imageAlt: "TapThat app — the public floor",
+    }),
+  component: AppHome,
+});
 
 function AppHome() {
   const { profile, setProfile, follows, memories: localMemories } = useLocalApp();
