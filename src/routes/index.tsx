@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       description: DEFAULT_DESCRIPTION,
       path: "/",
       image: "/images/hero.jpg",
-      imageAlt: "TapThat — charms for lifestyle events",
+      imageAlt: "TapThat charms on a cruise deck",
     }),
   component: Home,
 });
@@ -127,7 +127,7 @@ function Home() {
 
       <section className="px-4 pb-16">
         <div className="mx-auto max-w-site rounded-base border-2 border-border bg-accent p-8 shadow-shadow md:p-12">
-          <h2 className="text-4xl font-bold tracking-tight md:text-5xl">Ready to become a fan?</h2>
+          <h2 className="text-4xl font-bold tracking-tight md:text-5xl">Get a pack</h2>
           <p className="mt-3 max-w-lg text-base">
             Starter packs from {formatMoney(1499)}. The 10-pack is the weekend move.
           </p>

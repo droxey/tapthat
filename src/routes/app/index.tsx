@@ -15,7 +15,7 @@ export const Route = createFileRoute("/app/")({
       description: "Open charms, follow journeys, and leave the next moment on the floor.",
       path: "/app",
       image: "/images/afters.jpg",
-      imageAlt: "TapThat app — the public floor",
+      imageAlt: "TapThat app. The public floor.",
     }),
   component: AppHome,
 });

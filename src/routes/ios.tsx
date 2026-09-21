@@ -7,8 +7,7 @@ export const Route = createFileRoute("/ios")({
   head: () =>
     socialHead({
       title: `TapThat for iPhone | ${BRAND.name}`,
-      description:
-        "Store memories in the charm, follow what you traded, and keep a social card on every tap.",
+      description: "Memories in the charm, a social card on every tap, and a floor of public notes.",
       path: "/ios",
       image: "/images/scan.jpg",
       imageAlt: "TapThat for iPhone",
@@ -19,7 +18,7 @@ export const Route = createFileRoute("/ios")({
 const features = [
   {
     t: "Store memories in the charm",
-    d: "Photos, notes, and the place you were — tapped from the disc on your wrist.",
+    d: "Photos, notes, the place you were. Tapped from the disc on your wrist.",
   },
   {
     t: "See updates on what you traded",
@@ -31,7 +30,7 @@ const features = [
   },
   {
     t: "The public floor",
-    d: "A feed of how fans are using charms tonight — rooms, notes, journeys.",
+    d: "What people are tapping tonight.",
   },
   {
     t: "Public or private",
@@ -47,8 +46,8 @@ function Ios() {
           <p className="text-xs uppercase tracking-[0.28em] text-subtle">iOS 13.4+</p>
           <h1 className="mt-2 text-5xl tracking-tight md:text-6xl">TapThat for iPhone</h1>
           <p className="mt-4 text-lg text-muted">
-            Tech-powered charms in your pocket. The web app works on any phone; iOS adds camera
-            memories, comments, and lock-screen scanning that actually sticks.
+            The web app works on any phone. iPhone adds camera memories, comments, and a lock-screen
+            scan that actually sticks.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild>

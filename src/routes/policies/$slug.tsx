@@ -16,7 +16,7 @@ const pages: Record<string, { title: string; body: string[] }> = {
     body: [
       "The shop, app, and charms are provided as-is for personal and event use. Custom partner work is covered by a separate quote.",
       "You are responsible for what you write on a public charm. Don’t leave anything you wouldn’t say to the next person holding it.",
-      "Happiness guarantee: unused product may be returned within 14 days. Activated charms that have entered a public journey cannot be restocked as new.",
+      "Unused product may be returned within 14 days. Activated charms that have entered a public journey cannot be restocked as new.",
     ],
   },
   shipping: {

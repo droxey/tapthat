@@ -10,8 +10,8 @@ export function SiteFooter() {
         <div>
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
-            Tech-powered charms for lifestyle events. Tap any phone, leave a moment, follow the
-            rest.
+            Charms you tap. A night you keep. Trade it on the lido, at the palapa, or wherever
+            the pineapple is pointing.
           </p>
           <a className="mt-4 inline-block text-sm font-bold underline" href={`mailto:${BRAND.email}`}>
             {BRAND.email}

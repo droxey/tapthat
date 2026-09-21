@@ -13,7 +13,7 @@ export const Route = createFileRoute("/cart")({
   head: () =>
     socialHead({
       title: `Bag | ${BRAND.name}`,
-      description: "Your TapThat bag — enamel NFC charms ready to trade.",
+      description: "Your TapThat bag. Enamel charms ready to trade.",
       path: "/cart",
       image: "/products/pack-3.jpg",
       imageAlt: "TapThat shopping bag",
@@ -33,7 +33,7 @@ function Cart() {
         <p className="text-xs uppercase tracking-[0.28em] text-subtle">Order placed</p>
         <h1 className="mt-3 text-4xl">{receipt.id}</h1>
         <p className="mt-4 text-muted">
-          Demo checkout — nothing was charged and nothing was emailed. This order is saved in this
+          Demo checkout. Nothing was charged, and nothing was emailed. This order is saved in this
           browser for {receipt.email}.
         </p>
         <Button className="mt-8" asChild>

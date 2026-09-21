@@ -7,7 +7,7 @@ import { socialHead } from "@/lib/seo";
 type ShopSearch = { q?: string };
 
 const SHOP_DESCRIPTION =
-  "Enamel NFC charms, packs, bracelets, and the occasional hat. Battery-free. Built to be traded.";
+  "Enamel charms, packs, bracelets, and the occasional hat. No batteries. Built to trade.";
 
 export const Route = createFileRoute("/shop/")({
   validateSearch: (s: Record<string, unknown>): ShopSearch => ({
@@ -41,8 +41,7 @@ function Shop() {
     <main className="mx-auto max-w-site px-4 py-12">
       <h1 className="text-5xl font-bold tracking-tight">{q ? `“${q}”` : "Shop"}</h1>
       <p className="mt-3 max-w-xl text-muted">
-        Enamel NFC charms, packs, bracelets, and the occasional hat. Battery-free. Built to be
-        traded.
+        Enamel charms, packs, bracelets, and the occasional hat. No batteries. Built to trade.
       </p>
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((p) => (
@@ -55,7 +54,7 @@ function Shop() {
         <div className="rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow">
           <h2 className="text-xl font-bold">Bulk orders</h2>
           <p className="mt-2 text-sm text-muted">
-            100+ charms at a discounted rate for houses, labels, and commemorative nights.
+            100+ charms, cheaper per unit, for houses, labels, and one-off nights.
           </p>
         </div>
         <div className="rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow">
@@ -64,7 +63,7 @@ function Shop() {
         </div>
         <div className="rounded-base border-2 border-border bg-main p-6 shadow-shadow">
           <h2 className="text-xl font-bold">Let’s partner</h2>
-          <p className="mt-2 text-sm">Events, brands, artists. Drop a line and we’ll find the form factor.</p>
+          <p className="mt-2 text-sm">A house, a label, a room. Email us and we'll figure out the shape.</p>
           <a href={`mailto:${BRAND.email}`} className="mt-3 inline-block text-sm font-bold underline">
             {BRAND.email}
           </a>

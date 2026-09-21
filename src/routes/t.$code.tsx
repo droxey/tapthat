@@ -14,7 +14,7 @@ export const Route = createFileRoute("/t/$code")({
     }
     return socialHead({
       title: `${charm.name} · ${charm.code} | ${BRAND.name}`,
-      description: `Tap to open ${charm.name} — started at ${charm.origin}.`,
+      description: `Tap to open ${charm.name}, started at ${charm.origin}.`,
       path: `/t/${params.code}`,
       image: charm.image,
       imageAlt: charm.name,

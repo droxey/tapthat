@@ -95,10 +95,10 @@ export const products: Product[] = [
     image: "/products/fans.jpg",
     gallery: ["/products/fans.jpg", "/products/pack-3.jpg", "/images/tap.jpg"],
     category: "charms",
-    blurb: "Milky enamel for the last lounge of the night. Built for pool afters.",
+    blurb: "Milky enamel. Last lounge of the night.",
 
     description:
-      "A single NFC charm in pearlescent white enamel with a silver tap disc inset. Trade it, leave it on a lanyard, or sew it into a jacket. Battery-free, water-resistant, and readable by any modern phone. Pack of two.",
+      "White enamel with a silver disc in the middle. Keep one, give one. Any modern phone reads it. Pack of two.",
     variants: [
       { id: "milk", name: "Milk", available: true },
       { id: "night", name: "Night", available: true },
@@ -115,7 +115,7 @@ export const products: Product[] = [
     category: "charms",
     blurb: "Two hands, one heart, a disc you can actually tap.",
     description:
-      "Dusty-rose enamel hands meeting at a hidden NFC disc. The charm that gets passed between people who actually mean it. Pack of two.",
+      "Dusty-rose enamel hands, NFC disc hidden where they meet. The one you pass to someone you mean it with. Pack of two.",
     variants: [
       { id: "rose", name: "Rose", available: true },
       { id: "sand", name: "Sand", available: true },
@@ -144,10 +144,10 @@ export const products: Product[] = [
     image: "/products/live.jpg",
     gallery: ["/products/live.jpg", "/images/hero.jpg"],
     category: "charms",
-    blurb: "Sunburst enamel for the decks that still feel live.",
+    blurb: "Sunburst enamel. For the decks that still feel like a room.",
 
     description:
-      "A circular cream-and-terracotta sunburst with a silver NFC core. Named for the nights you want to keep, not the ones you post. Pack of two.",
+      "Cream and terracotta, silver NFC core. Named for the nights you want to keep, not the ones you post. Pack of two.",
     variants: [
       { id: "rose", name: "Rose", available: true },
       { id: "tide", name: "Tide", available: true },
@@ -156,7 +156,7 @@ export const products: Product[] = [
   },
   {
     slug: "charms-10",
-    name: "Tap Charms — 10 Pack",
+    name: "Tap Charms 10-Pack",
     price: 3899,
     compareAt: 4999,
     image: "/products/pack-10.jpg",
@@ -164,7 +164,7 @@ export const products: Product[] = [
     category: "packs",
     blurb: "Enough to trade a whole weekend and still keep one.",
     description:
-      "Ten mixed enamel NFC charms. Mixed shapes, one silver tap disc each, packed for a cruise week, a resort takeover, or a friend group that actually shows up. Battery-free and water-resistant.",
+      "Ten mixed enamel charms, one silver disc each. For a cruise week or a friend group that shows up.",
 
     variants: [
       { id: "mixed", name: "Mixed", available: true },
@@ -176,14 +176,14 @@ export const products: Product[] = [
   },
   {
     slug: "charms-3",
-    name: "Tap Charms — 3 Pack",
+    name: "Tap Charms 3-Pack",
     price: 1499,
     image: "/products/pack-3.jpg",
     gallery: ["/products/pack-3.jpg", "/images/tap.jpg"],
     category: "packs",
     blurb: "You, a friend, and the one you leave behind.",
     description:
-      "Three enamel NFC charms. The starter pack: keep one, trade one, follow the third. Works with any modern smartphone.",
+      "Three enamel charms. Keep one, trade one, follow the third. Any modern phone.",
     variants: [
       { id: "mixed", name: "Mixed", available: true },
       { id: "gradient", name: "Gradient", available: true },
@@ -194,14 +194,13 @@ export const products: Product[] = [
   },
   {
     slug: "charms-5",
-    name: "Tap Charms — 5 Pack",
+    name: "Tap Charms 5-Pack",
     price: 2299,
     image: "/products/pack-5.jpg",
     gallery: ["/products/pack-5.jpg", "/products/pack-3.jpg"],
     category: "packs",
     blurb: "The table pack. Five charms, five stories.",
-    description:
-      "Five mixed enamel NFC charms for a crew. Trade across a night and watch the journeys split in the app.",
+    description: "Five mixed enamel charms for a crew. Trade across a night and watch the journeys split.",
     variants: [
       { id: "mixed", name: "Mixed", available: true },
       { id: "gradient", name: "Gradient", available: true },
@@ -220,7 +219,7 @@ export const products: Product[] = [
     category: "wear",
     blurb: "A cord, three charms, ready to leave the house.",
     description:
-      "Hand-tied black cord with three live NFC charms already on it. Wear it, tap it, trade a charm off it. One size, knots adjust.",
+      "Hand-tied black cord with three live NFC charms already on it. Wear it, tap it, trade a charm off it. One size. Knots adjust.",
     variants: [
       { id: "ink", name: "Ink cord", available: true },
       { id: "sand", name: "Sand cord", available: true },
@@ -238,7 +237,7 @@ export const products: Product[] = [
     category: "charms",
     blurb: "The fruit on the table. Yellow enamel, hidden disc.",
     description:
-      "Chunky pineapple NFC charms with a silver tap disc. The sign people actually look for on a cruise, a resort, or a pineapple weekend. Pack of two.",
+      "Chunky pineapple charms with a silver tap disc. The sign people look for. Pack of two.",
 
     variants: [
       { id: "slick", name: "Slick", available: true },
@@ -301,7 +300,7 @@ export const quotes = [
 export const faqs: Faq[] = [
   {
     q: "How do Tap charms work?",
-    a: "Tap charms turn a bracelet, pin, or lanyard into a memory card you can pass. Tap the enamel disc with any phone to open the TapThat app, then see what’s inside or add to the story. Each scan is another chapter — even after you trade it.",
+    a: "Tap the enamel disc with any phone. You land in the app. See what's inside, or add a note. After you trade it, the next person does the same.",
   },
   {
     q: "Do they track my location?",
@@ -309,20 +308,20 @@ export const faqs: Faq[] = [
   },
   {
     q: "My charm won’t scan. Help?",
-    a: `First-time NFC is fussy. On iPhone the hotspot is the bar across the top back; on Android it’s usually the middle of the back. iPhones scan better on the lock screen. Androids scan better unlocked on the home screen. Rub in a slow circle for a few seconds. Thick cases block the field — take them off. Still stuck? Write ${BRAND.email} and we’ll replace a defective disc.`,
+    a: `First-time NFC is fussy. On iPhone the hotspot is the bar across the top back. On Android it's usually the middle of the back. iPhones scan better on the lock screen. Androids scan better unlocked on the home screen. Rub in a slow circle for a few seconds. Thick cases block the field. Take them off. Still stuck? Write ${BRAND.email} and we'll replace a defective disc.`,
   },
   {
     q: "Where are they used?",
-    a: "Anywhere you’d like to commemorate a night or stay in touch with someone you just met: lifestyle cruises, resort takeovers, pineapple weekends, pool afters, and any commemorative event.",
+    a: "Cruises, resort takeovers, pineapple weekends, pool afters. Anywhere you'd commemorate a night or stay in touch with someone you just met.",
 
   },
   {
     q: "Which phones are compatible?",
-    a: `Most modern phones speak NFC. Best experience: iPhone 11 with iOS 13 or later, or Android 6.0 and later. iPhone 7, 8, and X still scan with a dedicated reader app. Check your spec sheet if you’re unsure, or ask ${BRAND.email}.`,
+    a: `Most modern phones speak NFC. Best bet: iPhone 11 with iOS 13 or later, or Android 6.0 and later. iPhone 7, 8, and X still scan with a dedicated reader app. Unsure? Ask ${BRAND.email}.`,
   },
   {
     q: "Do they need batteries?",
-    a: "No. Tap charms are battery-free, water-resistant, and built to be traded again. No charging, no pairing.",
+    a: "No. No battery, no charging, no pairing. They're water-resistant because they go in the pool.",
   },
   {
     q: "How long does shipping take?",
@@ -330,15 +329,15 @@ export const faqs: Faq[] = [
   },
   {
     q: "How secure is my data?",
-    a: "We do not sell data to third parties, and we do not read anything you didn’t put in the app. Activate a charm in public mode to share with the world, or private mode so only people who physically tap it can see and add memories.",
+    a: "We don't sell data, and we don't read anything you didn't put in the app. Public mode shares with the floor. Private mode is only people who physically tap the disc.",
   },
   {
     q: "Can I return a charm?",
-    a: `Happiness guarantee. If you’re not satisfied, contact ${BRAND.email} within 14 days for a return or exchange.`,
+    a: `If you're not satisfied, write ${BRAND.email} within 14 days. We'll sort a return or exchange.`,
   },
   {
     q: "How do I reach support?",
-    a: `${BRAND.email} — we answer. Or DM the socials in the footer.`,
+    a: `${BRAND.email}. We answer. Or DM the socials in the footer.`,
   },
 ];
 
@@ -352,19 +351,19 @@ export const howSteps = [
   {
     n: "02",
     title: "Open the link that appears",
-    body: "Your phone offers a magic link. Open it. You’ll land in the TapThat app — some phones open it on their own. No disc yet? Try /t/TT-FANS-004.",
+    body: "Your phone offers a magic link. Open it. You'll land in the TapThat app. Some phones open it on their own. No disc yet? Try /t/TT-FANS-004.",
     image: "/images/tap.jpg",
   },
   {
     n: "03",
-    title: "Activate and leave a moment",
-    body: "Tie the charm to your profile, name it, pick public or private, and leave a note or photo for the next person. If it’s already live, you just add the next chapter.",
+    title: "Name it and leave a moment",
+    body: "Name the charm, pick public or private, leave a note for whoever holds it next. If it's already live, you just add the next chapter.",
     image: "/products/heart.jpg",
   },
   {
     n: "04",
-    title: "Trade, connect, follow",
-    body: "Pass the charm. Watch future moments land in the app. Open anyone’s profile from a tap and keep the night going after the pool closes.",
+    title: "Pass it on",
+    body: "Hand the charm over. Future notes land in the app. Tap someone's disc and you've got their card after the pool closes.",
     image: "/images/afters.jpg",
   },
 ];
@@ -580,7 +579,7 @@ export const posts: Post[] = [
   },
   {
     slug: "trading-after-the-show",
-    title: "On trading after the show — a small history of things we pass",
+    title: "On trading after the show, a small history of things we pass",
     date: "2026-01-23",
     author: "Editorial",
     dek: "Friendship bracelets, pins, lanyards, and why a disc you can tap belongs in that line.",
@@ -628,7 +627,7 @@ export const ambassadors: Ambassador[] = [
     handle: "@julian",
     city: "Jamaica",
     role: "Resort Takeover",
-    bio: "Takes charms into daylight — palapas, the walk between boats, the buffet line.",
+    bio: "Takes charms into daylight. Palapas, the walk between boats, the buffet line.",
 
     avatar: "/people/julian.jpg",
   },

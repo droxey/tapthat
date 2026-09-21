@@ -3,11 +3,11 @@ import { BRAND } from "@/lib/catalog";
 export const SITE_URL = `https://${BRAND.domain}`;
 
 export const DEFAULT_DESCRIPTION =
-  "TapThat — tech-powered charms for lifestyle events. Tap any phone, leave a moment, follow the journey.";
+  "Tap that. Follow the rest. Charms for cruises, resorts, pineapple weekends.";
 
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og.jpg`;
 
-export const DEFAULT_OG_TITLE = "TapThat — charms for cruises, resorts, pineapple weekends";
+export const DEFAULT_OG_TITLE = "TapThat. Charms for cruises, resorts, pineapple weekends.";
 
 export type SocialHeadInput = {
   /** Document <title> and fallback for share title */
@@ -34,7 +34,7 @@ export function socialHead({
   description,
   path = "/",
   image = DEFAULT_OG_IMAGE,
-  imageAlt = "TapThat — tech-powered charms for lifestyle events",
+  imageAlt = "TapThat. Charms for cruises, resorts, pineapple weekends.",
   type = "website",
   shareTitle,
 }: SocialHeadInput) {

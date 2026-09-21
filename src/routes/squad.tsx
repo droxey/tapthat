@@ -83,7 +83,7 @@ function Squad() {
             </div>
             <Button type="submit">Send application</Button>
             <p className="text-xs text-muted">
-              Saved in this browser only — for a real note, email {BRAND.email}.
+              Saved in this browser only. For a real note, email {BRAND.email}.
             </p>
           </form>
         )}

@@ -23,7 +23,7 @@ export const Route = createFileRoute("/app/$charmId")({
     }
     return socialHead({
       title: `${charm.name} · ${charm.code} | ${BRAND.name}`,
-      description: `${charm.origin} — ${charm.holders} holders, ${charm.events} events. ${charm.visibility} journey.`,
+      description: `${charm.origin}. ${charm.holders} holders, ${charm.events} events. ${charm.visibility} journey.`,
       path: `/app/${charm.id}`,
       image: charm.image,
       imageAlt: charm.name,
