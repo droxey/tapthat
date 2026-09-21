@@ -8,7 +8,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { charmById, memoriesFor } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
 
-export const Route = createFileRoute("/app/$charmId")({ component: CharmPage });
+export const Route = createFileRoute("/app/$charmId")({
+  validateSearch: (s: Record<string, unknown>): { tap?: boolean } =>
+    s.tap === true || s.tap === "true" || s.tap === 1 ? { tap: true } : {},
+  component: CharmPage,
+});
 
 function CharmPage() {
   const { charmId } = Route.useParams();
@@ -22,7 +26,8 @@ function CharmPage() {
   const addMemory = useLocalApp((s) => s.addMemory);
   const profile = useLocalApp((s) => s.profile);
   const following = follows.includes(charm.id);
-  const [open, setOpen] = useState(false);
+  const { tap } = Route.useSearch();
+  const [open, setOpen] = useState(Boolean(tap));
   const [note, setNote] = useState("");
   const [place, setPlace] = useState("");
 

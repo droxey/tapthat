@@ -1,7 +1,9 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import {
+  charmByCode,
   charmById,
+  floorMemories,
   memoriesFor,
   productBySlug,
   relatedProducts,
@@ -56,5 +58,24 @@ describe("relatedProducts", () => {
       related.some((p) => p.slug === "afters-ghost"),
       false,
     );
+  });
+});
+
+describe("charmByCode", () => {
+  it("matches ghost-004 regardless of case", () => {
+    assert.equal(charmByCode("tt-ghost-004")?.id, "ghost-004");
+    assert.equal(charmByCode("TT-GHOST-004")?.id, "ghost-004");
+  });
+
+  it("returns undefined for an unknown code", () => {
+    assert.equal(charmByCode("nope"), undefined);
+  });
+});
+
+describe("floorMemories", () => {
+  it("keeps public m1 and hides private m8", () => {
+    const ids = floorMemories().map((m) => m.id);
+    assert.equal(ids.includes("m1"), true);
+    assert.equal(ids.includes("m8"), false);
   });
 });

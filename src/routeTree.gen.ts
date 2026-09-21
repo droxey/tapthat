@@ -23,6 +23,7 @@ import { Route as JournalSlugRouteImport } from './routes/journal/$slug'
 import { Route as PoliciesSlugRouteImport } from './routes/policies/$slug'
 import { Route as ShopIndexRouteImport } from './routes/shop/index'
 import { Route as ShopSlugRouteImport } from './routes/shop/$slug'
+import { Route as TCodeRouteImport } from './routes/t.$code'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -94,6 +95,11 @@ const ShopSlugRoute = ShopSlugRouteImport.update({
   path: '/shop/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TCodeRoute = TCodeRouteImport.update({
+  id: '/t/$code',
+  path: '/t/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/journal/$slug': typeof JournalSlugRoute
   '/policies/$slug': typeof PoliciesSlugRoute
   '/shop/$slug': typeof ShopSlugRoute
+  '/t/$code': typeof TCodeRoute
   '/app/': typeof AppIndexRoute
   '/journal/': typeof JournalIndexRoute
   '/shop/': typeof ShopIndexRoute
@@ -123,6 +130,7 @@ export interface FileRoutesByTo {
   '/journal/$slug': typeof JournalSlugRoute
   '/policies/$slug': typeof PoliciesSlugRoute
   '/shop/$slug': typeof ShopSlugRoute
+  '/t/$code': typeof TCodeRoute
   '/app': typeof AppIndexRoute
   '/journal': typeof JournalIndexRoute
   '/shop': typeof ShopIndexRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/journal/$slug': typeof JournalSlugRoute
   '/policies/$slug': typeof PoliciesSlugRoute
   '/shop/$slug': typeof ShopSlugRoute
+  '/t/$code': typeof TCodeRoute
   '/app/': typeof AppIndexRoute
   '/journal/': typeof JournalIndexRoute
   '/shop/': typeof ShopIndexRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
     | '/journal/$slug'
     | '/policies/$slug'
     | '/shop/$slug'
+    | '/t/$code'
     | '/app/'
     | '/journal/'
     | '/shop/'
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/journal/$slug'
     | '/policies/$slug'
     | '/shop/$slug'
+    | '/t/$code'
     | '/app'
     | '/journal'
     | '/shop'
@@ -190,6 +201,7 @@ export interface FileRouteTypes {
     | '/journal/$slug'
     | '/policies/$slug'
     | '/shop/$slug'
+    | '/t/$code'
     | '/app/'
     | '/journal/'
     | '/shop/'
@@ -207,6 +219,7 @@ export interface RootRouteChildren {
   JournalSlugRoute: typeof JournalSlugRoute
   PoliciesSlugRoute: typeof PoliciesSlugRoute
   ShopSlugRoute: typeof ShopSlugRoute
+  TCodeRoute: typeof TCodeRoute
   AppIndexRoute: typeof AppIndexRoute
   JournalIndexRoute: typeof JournalIndexRoute
   ShopIndexRoute: typeof ShopIndexRoute
@@ -312,6 +325,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShopSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/t/$code': {
+      id: '/t/$code'
+      path: '/t/$code'
+      fullPath: '/t/$code'
+      preLoaderRoute: typeof TCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -327,6 +347,7 @@ const rootRouteChildren: RootRouteChildren = {
   JournalSlugRoute: JournalSlugRoute,
   PoliciesSlugRoute: PoliciesSlugRoute,
   ShopSlugRoute: ShopSlugRoute,
+  TCodeRoute: TCodeRoute,
   AppIndexRoute: AppIndexRoute,
   JournalIndexRoute: JournalIndexRoute,
   ShopIndexRoute: ShopIndexRoute,
@@ -334,12 +355,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

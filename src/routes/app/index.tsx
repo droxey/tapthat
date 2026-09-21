@@ -4,14 +4,28 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { charms, memories } from "@/lib/catalog";
+import { charms, floorMemories, isCharmPublic } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
 
 export const Route = createFileRoute("/app/")({ component: AppHome });
 
 function AppHome() {
-  const { profile, setProfile, follows } = useLocalApp();
-  const feed = [...memories].sort((a, b) => +new Date(b.at) - +new Date(a.at));
+  const { profile, setProfile, follows, memories: localMemories } = useLocalApp();
+  const feed = [
+    ...floorMemories(),
+    ...localMemories.filter((m) => isCharmPublic(m.charmId)).map((m) => ({
+      id: m.id,
+      charmId: m.charmId,
+      author: profile.name || "a fan",
+      handle: profile.handle,
+      avatar: "",
+      at: m.at,
+      place: m.place,
+      event: "",
+      note: m.note,
+      photo: undefined as string | undefined,
+    })),
+  ].sort((a, b) => +new Date(b.at) - +new Date(a.at));
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
@@ -20,8 +34,11 @@ function AppHome() {
           <p className="text-xs uppercase tracking-[0.28em] text-subtle">Web app</p>
           <h1 className="mt-2 text-5xl tracking-tight">The floor</h1>
           <p className="mt-3 max-w-xl text-muted">
-            Public moments from charms in the wild. Tap a disc in real life — or simulate a tap
-            from a charm page.
+            Public moments from charms in the wild. Tap a disc in real life, or open{" "}
+            <a href="/t/TT-GHOST-004" className="font-bold underline">
+              /t/TT-GHOST-004
+            </a>{" "}
+            to simulate one.
           </p>
         </div>
         <Button variant="outline" asChild>
@@ -43,9 +60,9 @@ function AppHome() {
               ) : null}
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
-                  <img src={m.avatar} alt="" className="size-8 object-cover" />
+                  {m.avatar ? <img src={m.avatar} alt="" className="size-8 object-cover" /> : null}
                   <p className="text-sm">
-                    {m.author} <span className="text-muted">{m.handle}</span>
+                    {m.author} {m.handle ? <span className="text-muted">{m.handle}</span> : null}
                   </p>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-fg">{m.note}</p>

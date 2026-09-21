@@ -352,7 +352,7 @@ export const howSteps = [
   {
     n: "02",
     title: "Open the link that appears",
-    body: "Your phone offers a magic link. Open it. You’ll land in the TapThat app — some phones open it on their own.",
+    body: "Your phone offers a magic link. Open it. You’ll land in the TapThat app — some phones open it on their own. No disc yet? Try /t/TT-GHOST-004.",
     image: "/images/tap.jpg",
   },
   {
@@ -657,4 +657,20 @@ export function relatedProducts(slug: string, n = 3) {
   return products
     .filter((p) => p.slug !== slug && (!current || p.category === current.category || p.featured))
     .slice(0, n);
+}
+
+export function charmByCode(code: string) {
+  const needle = code.trim().toUpperCase();
+  return charms.find((c) => c.code.toUpperCase() === needle);
+}
+
+export function isCharmPublic(charmId: string) {
+  const c = charmById(charmId);
+  return c?.visibility === "public";
+}
+
+export function floorMemories(seed: Memory[] = memories) {
+  return seed
+    .filter((m) => isCharmPublic(m.charmId))
+    .sort((a, b) => +new Date(b.at) - +new Date(a.at));
 }
