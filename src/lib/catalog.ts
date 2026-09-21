@@ -291,7 +291,7 @@ export const quotes = [
     handle: "@mclaughlin",
   },
   {
-    text: "Taking Little Fans to every pineapple weekend this year.",
+    text: "Taking Fans to every pineapple weekend this year.",
 
     name: "Hope",
     handle: "@hopefuldaydreams",
@@ -372,7 +372,7 @@ export const howSteps = [
 export const charms: Charm[] = [
   {
     id: "fans-004",
-    name: "Little Fans",
+    name: "Fans",
     code: "TT-FANS-004",
     visibility: "public",
     image: "/products/fans.jpg",
@@ -468,7 +468,7 @@ export const memories: Memory[] = [
     at: "2026-07-11T16:05:00",
     place: "Resort Takeover",
     event: "Jamaica",
-    note: "Pinned to a tote between two palapas. Little Fans wanted daylight for once.",
+    note: "Pinned to a tote between two palapas. Fans wanted daylight for once.",
 
     photo: "/people/julian.jpg",
   },
@@ -521,7 +521,7 @@ export const memories: Memory[] = [
     place: "Lido Afters",
     event: "Caribbean",
 
-    note: "Named it Little Fans. Don’t make it famous.",
+    note: "Named it Fans. Don’t make it famous.",
     photo: "/products/fans.jpg",
   },
   {
@@ -599,7 +599,7 @@ export const posts: Post[] = [
     image: "/products/bracelet.jpg",
     body: [
       "One charm on a black cord is enough. Two if they’re a pair. A full stack reads as a stall, not a night.",
-      "Pin Little Fans to a jacket lining if you want it found. Put LIVE on the outside if you want it tapped.",
+      "Pin Fans to a jacket lining if you want it found. Put LIVE on the outside if you want it tapped.",
     ],
   },
 ];
