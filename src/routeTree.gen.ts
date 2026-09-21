@@ -15,7 +15,6 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as IosRouteImport } from './routes/ios'
-import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as SquadRouteImport } from './routes/squad'
 import { Route as AppIndexRouteImport } from './routes/app/index'
 import { Route as AppCharmIdRouteImport } from './routes/app/$charmId'
@@ -53,11 +52,6 @@ const HowItWorksRoute = HowItWorksRouteImport.update({
 const IosRoute = IosRouteImport.update({
   id: '/ios',
   path: '/ios',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnersRoute = PartnersRouteImport.update({
-  id: '/partners',
-  path: '/partners',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SquadRoute = SquadRouteImport.update({
@@ -108,7 +102,6 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
   '/ios': typeof IosRoute
-  '/partners': typeof PartnersRoute
   '/squad': typeof SquadRoute
   '/app/$charmId': typeof AppCharmIdRoute
   '/journal/$slug': typeof JournalSlugRoute
@@ -125,7 +118,6 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
   '/ios': typeof IosRoute
-  '/partners': typeof PartnersRoute
   '/squad': typeof SquadRoute
   '/app/$charmId': typeof AppCharmIdRoute
   '/journal/$slug': typeof JournalSlugRoute
@@ -143,7 +135,6 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
   '/ios': typeof IosRoute
-  '/partners': typeof PartnersRoute
   '/squad': typeof SquadRoute
   '/app/$charmId': typeof AppCharmIdRoute
   '/journal/$slug': typeof JournalSlugRoute
@@ -162,7 +153,6 @@ export interface FileRouteTypes {
     | '/faq'
     | '/how-it-works'
     | '/ios'
-    | '/partners'
     | '/squad'
     | '/app/$charmId'
     | '/journal/$slug'
@@ -179,7 +169,6 @@ export interface FileRouteTypes {
     | '/faq'
     | '/how-it-works'
     | '/ios'
-    | '/partners'
     | '/squad'
     | '/app/$charmId'
     | '/journal/$slug'
@@ -196,7 +185,6 @@ export interface FileRouteTypes {
     | '/faq'
     | '/how-it-works'
     | '/ios'
-    | '/partners'
     | '/squad'
     | '/app/$charmId'
     | '/journal/$slug'
@@ -214,7 +202,6 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   HowItWorksRoute: typeof HowItWorksRoute
   IosRoute: typeof IosRoute
-  PartnersRoute: typeof PartnersRoute
   SquadRoute: typeof SquadRoute
   AppCharmIdRoute: typeof AppCharmIdRoute
   JournalSlugRoute: typeof JournalSlugRoute
@@ -267,13 +254,6 @@ declare module '@tanstack/react-router' {
       path: '/ios'
       fullPath: '/ios'
       preLoaderRoute: typeof IosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partners': {
-      id: '/partners'
-      path: '/partners'
-      fullPath: '/partners'
-      preLoaderRoute: typeof PartnersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/squad': {
@@ -342,7 +322,6 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   HowItWorksRoute: HowItWorksRoute,
   IosRoute: IosRoute,
-  PartnersRoute: PartnersRoute,
   SquadRoute: SquadRoute,
   AppCharmIdRoute: AppCharmIdRoute,
   JournalSlugRoute: JournalSlugRoute,
