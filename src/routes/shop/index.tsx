@@ -2,13 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { ProductCard } from "@/components/product-card";
 import { BRAND, products } from "@/lib/catalog";
+import { socialHead } from "@/lib/seo";
 
 type ShopSearch = { q?: string };
+
+const SHOP_DESCRIPTION =
+  "Enamel NFC charms, packs, bracelets, and the occasional hat. Battery-free. Built to be traded.";
 
 export const Route = createFileRoute("/shop/")({
   validateSearch: (s: Record<string, unknown>): ShopSearch => ({
     q: typeof s.q === "string" ? s.q : undefined,
   }),
+  head: () =>
+    socialHead({
+      title: `Shop | ${BRAND.name}`,
+      description: SHOP_DESCRIPTION,
+      path: "/shop",
+      image: "/products/pack-10.jpg",
+      imageAlt: "TapThat charm packs",
+    }),
   component: Shop,
 });
 
