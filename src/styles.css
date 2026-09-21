@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;1,9..40,500&display=swap");
+@import "tailwindcss";
+
+:root {
+  --border-radius: 5px;
+  --box-shadow-x: 4px;
+  --box-shadow-y: 4px;
+  --reverse-box-shadow-x: -4px;
+  --reverse-box-shadow-y: -4px;
+  --background: hsl(214, 95%, 93%);
+  --secondary-background: #ffffff;
+  --foreground: #000000;
+  --main: hsl(217, 100%, 66%);
+  --main-foreground: #000000;
+  --accent: #facc00;
+  --accent-foreground: #000000;
+  --muted: #3d4a5c;
+  --subtle: #5b6b80;
+  --border: #000000;
+  --overlay: rgb(0 0 0 / 0.8);
+  --shadow: 4px 4px 0 0 #000000;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-foreground: var(--foreground);
+  --color-main: var(--main);
+  --color-main-foreground: var(--main-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-border: var(--border);
+  --color-overlay: var(--overlay);
+  --color-ring: var(--border);
+
+  --color-bg: var(--background);
+  --color-surface: var(--secondary-background);
+  --color-elevated: var(--secondary-background);
+  --color-fg: var(--foreground);
+  --color-primary: var(--main);
+  --color-primary-fg: var(--main-foreground);
+  --color-accent-fg: var(--accent-foreground);
+
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-base: var(--border-radius);
+  --radius-xs: var(--border-radius);
+  --radius-sm: var(--border-radius);
+  --radius-md: var(--border-radius);
+  --radius-lg: var(--border-radius);
+  --radius-xl: var(--border-radius);
+
+  --shadow-shadow: var(--shadow);
+  --spacing-boxShadowX: var(--box-shadow-x);
+  --spacing-boxShadowY: var(--box-shadow-y);
+  --spacing-reverseBoxShadowX: var(--reverse-box-shadow-x);
+  --spacing-reverseBoxShadowY: var(--reverse-box-shadow-y);
+
+  --max-width-site: 81.25rem;
+
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--background);
+    color: var(--foreground);
+  }
+  body {
+    font-family: var(--font-sans);
+    font-weight: 500;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-weight: 700;
+  }
+  img {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
+  ::selection {
+    background: var(--main);
+    color: var(--main-foreground);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

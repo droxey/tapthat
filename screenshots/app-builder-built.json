@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "TapThat",
+      "hasCanvas": false,
+      "bodyTextLen": 1935,
+      "bodyTextHash": "75f755605bf9323deceb7f87bad9dbda0f25e67c7352f7dc9a940b5142703f37",
+      "bodyTextPrefix": "TAPTHAT Shop App Wut? FAQ Charms for cruises, resorts, pineapple",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "TapThat",
+      "hasCanvas": false,
+      "bodyTextLen": 1917,
+      "bodyTextHash": "963ee681e2b144d91cc6941ddc088fb203a926d98b3790f0db7001e34c54c275",
+      "bodyTextPrefix": "TAPTHAT Charms for cruises, resorts, pineapple weekends Tap that",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

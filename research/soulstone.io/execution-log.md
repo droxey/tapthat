@@ -1,0 +1,1 @@
+Live GET soulstone.io → 503. Wayback id_ snapshots fetched (home, shop, how-it-works, faq, partner, beads, blog, ios). Squad/PDP 404. Kickstarter + EDM.com used for app copy. chrome-mcp not available; Playwright used only for clone QA.

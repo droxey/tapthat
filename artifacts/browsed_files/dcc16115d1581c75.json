@@ -1,0 +1,50 @@
+[
+  {
+    "name": "code.css",
+    "path": "src/styling/code.css",
+    "sha": "800441a688e477220a516b23cb19c7b51ff7d92c",
+    "size": 2192,
+    "url": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/styling/code.css?ref=main",
+    "html_url": "https://github.com/ekmas/neobrutalism-components/blob/main/src/styling/code.css",
+    "git_url": "https://api.github.com/repos/ekmas/neobrutalism-components/git/blobs/800441a688e477220a516b23cb19c7b51ff7d92c",
+    "download_url": "https://raw.githubusercontent.com/ekmas/neobrutalism-components/main/src/styling/code.css",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/styling/code.css?ref=main",
+      "git": "https://api.github.com/repos/ekmas/neobrutalism-components/git/blobs/800441a688e477220a516b23cb19c7b51ff7d92c",
+      "html": "https://github.com/ekmas/neobrutalism-components/blob/main/src/styling/code.css"
+    }
+  },
+  {
+    "name": "globals.css",
+    "path": "src/styling/globals.css",
+    "sha": "0db21814a42d75973b09ca8de9cad69c6475d115",
+    "size": 7766,
+    "url": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/styling/globals.css?ref=main",
+    "html_url": "https://github.com/ekmas/neobrutalism-components/blob/main/src/styling/globals.css",
+    "git_url": "https://api.github.com/repos/ekmas/neobrutalism-components/git/blobs/0db21814a42d75973b09ca8de9cad69c6475d115",
+    "download_url": "https://raw.githubusercontent.com/ekmas/neobrutalism-components/main/src/styling/globals.css",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/styling/globals.css?ref=main",
+      "git": "https://api.github.com/repos/ekmas/neobrutalism-components/git/blobs/0db21814a42d75973b09ca8de9cad69c6475d115",
+      "html": "https://github.com/ekmas/neobrutalism-components/blob/main/src/styling/globals.css"
+    }
+  },
+  {
+    "name": "marquee.css",
+    "path": "src/styling/marquee.css",
+    "sha": "04bf25a60e01669a88d0c5d00f8d181cac6595e0",
+    "size": 1432,
+    "url": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/styling/marquee.css?ref=main",
+    "html_url": "https://github.com/ekmas/neobrutalism-components/blob/main/src/styling/marquee.css",
+    "git_url": "https://api.github.com/repos/ekmas/neobrutalism-components/git/blobs/04bf25a60e01669a88d0c5d00f8d181cac6595e0",
+    "download_url": "https://raw.githubusercontent.com/ekmas/neobrutalism-components/main/src/styling/marquee.css",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/styling/marquee.css?ref=main",
+      "git": "https://api.github.com/repos/ekmas/neobrutalism-components/git/blobs/04bf25a60e01669a88d0c5d00f8d181cac6595e0",
+      "html": "https://github.com/ekmas/neobrutalism-components/blob/main/src/styling/marquee.css"
+    }
+  }
+]

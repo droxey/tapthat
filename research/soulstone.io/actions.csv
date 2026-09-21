@@ -1,0 +1,10 @@
+action,route,status
+Shop Soulstones CTA,/,mapped
+How it works video,/,youtube linked
+FAQ accordion,/,mapped
+Newsletter,/,mapped
+Add to cart / choose options,/products,mapped-demo
+Quick view,/collections,omitted (full PDP instead)
+Partner contact form,/pages/partner,mapped
+Squad apply,/pages/squad,reconstructed
+App feed + scan,app.soulstone.io,demo on /app

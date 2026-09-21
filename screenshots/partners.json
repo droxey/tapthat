@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/partners",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "TapThat",
+      "hasCanvas": false,
+      "bodyTextLen": 1908,
+      "bodyTextHash": "a6d965ef4181750b2ad99724e88d5fc8d383cc441d3876eeab462e639128d663",
+      "bodyTextPrefix": "TAPTHAT Shop App Wut? FAQ Pineapples Squad External links Partne",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <SafeFragment fallback={null}>\n      <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n        <SafeFragment fallback={function fallback}>\n          <MatchInnerImpl match={{id:\"__root__/\", ...}}>\n            <TSRComponent>\n              <html lang=\"en\" className=\"antialiased\" suppressHydrationWarning={true}>\n                <head>\n                <body className=\"min-h-scre...\">\n                  <PreviewHostBridge>\n                  <AuthProvider>\n                    <SiteHeader>\n                    <OutletImpl>\n                    <SiteFooter>\n                      <footer className=\"mt-16 bord...\">\n                        <div className=\"mx-auto gr...\">\n                          <div>\n                          <nav>\n                          <div>\n                            <p>\n                            <p>\n                            <NewsletterForm className=\"mt-4\">\n                              <form className=\"flex items...\" onSubmit={function onSubmit}>\n                                <Input type=\"email\" required={true} value=\"\" onChange={function onChange} ...>\n                                  <input\n                                    className=\"flex h-10 w-full rounded-base border-2 border-border bg-secondary-backg...\"\n                                    type=\"email\"\n                                    required={true}\n                                    value=\"\"\n                                    onChange={function onChange}\n                                    placeholder=\"Email\"\n                                    aria-label=\"Email\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                                ...\n                        ...\n                  ...\n"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/partners.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "TapThat",
+      "hasCanvas": false,
+      "bodyTextLen": 1873,
+      "bodyTextHash": "d0ace847b0d20717f51597c6d216052579cc59407c02b1f3ca7190765580c9e6",
+      "bodyTextPrefix": "TAPTHAT External links Partners in Pineapples Cruises, resorts, ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/partners-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/partners.json"
+}

@@ -1,0 +1,2 @@
+route,role,status,reason
+app.soulstone.io,*,blocked,live 503; no credentials; chrome-mcp not in this sandbox

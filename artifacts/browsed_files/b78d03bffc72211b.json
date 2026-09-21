@@ -1,0 +1,34 @@
+[
+  {
+    "name": "stars",
+    "path": "src/examples/stars",
+    "sha": "97f2e6e14cde1f594cebce8337e13b5dc2fb6b54",
+    "size": 0,
+    "url": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/examples/stars?ref=main",
+    "html_url": "https://github.com/ekmas/neobrutalism-components/tree/main/src/examples/stars",
+    "git_url": "https://api.github.com/repos/ekmas/neobrutalism-components/git/trees/97f2e6e14cde1f594cebce8337e13b5dc2fb6b54",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/examples/stars?ref=main",
+      "git": "https://api.github.com/repos/ekmas/neobrutalism-components/git/trees/97f2e6e14cde1f594cebce8337e13b5dc2fb6b54",
+      "html": "https://github.com/ekmas/neobrutalism-components/tree/main/src/examples/stars"
+    }
+  },
+  {
+    "name": "ui",
+    "path": "src/examples/ui",
+    "sha": "4f5c3d24ddb158607c4a919647f5168b51562ffb",
+    "size": 0,
+    "url": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/examples/ui?ref=main",
+    "html_url": "https://github.com/ekmas/neobrutalism-components/tree/main/src/examples/ui",
+    "git_url": "https://api.github.com/repos/ekmas/neobrutalism-components/git/trees/4f5c3d24ddb158607c4a919647f5168b51562ffb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/ekmas/neobrutalism-components/contents/src/examples/ui?ref=main",
+      "git": "https://api.github.com/repos/ekmas/neobrutalism-components/git/trees/4f5c3d24ddb158607c4a919647f5168b51562ffb",
+      "html": "https://github.com/ekmas/neobrutalism-components/tree/main/src/examples/ui"
+    }
+  }
+]

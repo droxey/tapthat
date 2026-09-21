@@ -1,0 +1,14 @@
+{
+  "domain": "soulstone.io",
+  "source": "wayback 2024-09 to 2024-12 (live 503)",
+  "nav": ["Shop","App","Wut?","FAQ","Partner","Squad"],
+  "routes": [
+    "/", "/collections/all", "/collections/beads", "/products/*",
+    "/how-it-works", "/pages/how-soulstones-work", "/pages/faq",
+    "/pages/partner", "/pages/squad", "/ios-app", "/blogs/soulstones",
+    "/cart", "/policies/privacy-policy", "/policies/terms-of-service",
+    "https://app.soulstone.io"
+  ],
+  "auth": "blocked — live site 503, app.soulstone.io not captured",
+  "status": "public discovery complete; authenticated traversal blocked"
+}
