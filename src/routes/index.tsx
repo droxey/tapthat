@@ -2,10 +2,22 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/product-card";
-import { events, faqs, howSteps, products } from "@/lib/catalog";
+import { BRAND, events, faqs, howSteps, products } from "@/lib/catalog";
+import { DEFAULT_DESCRIPTION, DEFAULT_OG_TITLE, socialHead } from "@/lib/seo";
 import { formatMoney } from "@/lib/utils";
 
-export const Route = createFileRoute("/")({ component: Home });
+export const Route = createFileRoute("/")({
+  head: () =>
+    socialHead({
+      title: BRAND.name,
+      shareTitle: DEFAULT_OG_TITLE,
+      description: DEFAULT_DESCRIPTION,
+      path: "/",
+      image: "/images/hero.jpg",
+      imageAlt: "TapThat — charms for lifestyle events",
+    }),
+  component: Home,
+});
 
 function Home() {
   const featured = products.filter((p) => p.featured).slice(0, 4);

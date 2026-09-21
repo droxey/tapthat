@@ -5,12 +5,30 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { charmById, memoriesFor } from "@/lib/catalog";
+import { BRAND, charmById, memoriesFor } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
+import { DEFAULT_DESCRIPTION, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/app/$charmId")({
   validateSearch: (s: Record<string, unknown>): { tap?: boolean } =>
     s.tap === true || s.tap === "true" || s.tap === 1 ? { tap: true } : {},
+  head: ({ params }) => {
+    const charm = charmById(params.charmId);
+    if (!charm) {
+      return socialHead({
+        title: `Charm not found | ${BRAND.name}`,
+        description: DEFAULT_DESCRIPTION,
+        path: `/app/${params.charmId}`,
+      });
+    }
+    return socialHead({
+      title: `${charm.name} · ${charm.code} | ${BRAND.name}`,
+      description: `${charm.origin} — ${charm.holders} holders, ${charm.events} events. ${charm.visibility} journey.`,
+      path: `/app/${charm.id}`,
+      image: charm.image,
+      imageAlt: charm.name,
+    });
+  },
   component: CharmPage,
 });
 
