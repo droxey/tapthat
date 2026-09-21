@@ -1,8 +1,19 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { howSteps } from "@/lib/catalog";
+import { BRAND, howSteps } from "@/lib/catalog";
+import { socialHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/how-it-works")({ component: HowItWorks });
+export const Route = createFileRoute("/how-it-works")({
+  head: () =>
+    socialHead({
+      title: `How it works | ${BRAND.name}`,
+      description: "Tap the disc. Open the link. Leave a moment. Pass it on.",
+      path: "/how-it-works",
+      image: "/images/scan.jpg",
+      imageAlt: "How TapThat charms work",
+    }),
+  component: HowItWorks,
+});
 
 function HowItWorks() {
   return (
