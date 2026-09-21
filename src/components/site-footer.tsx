@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Wordmark } from "./logo";
 import { NewsletterForm } from "./newsletter-form";
+import { BRAND } from "@/lib/catalog";
 
 export function SiteFooter() {
   return (
@@ -12,8 +13,8 @@ export function SiteFooter() {
             Tech-powered charms for lifestyle events. Tap any phone, leave a moment, follow the
             rest.
           </p>
-          <a className="mt-4 inline-block text-sm font-bold underline" href="mailto:hello@tapthat.fans">
-            hello@tapthat.fans
+          <a className="mt-4 inline-block text-sm font-bold underline" href={`mailto:${BRAND.email}`}>
+            {BRAND.email}
           </a>
         </div>
         <nav className="grid grid-cols-2 gap-2 text-sm font-bold">

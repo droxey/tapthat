@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { ambassadors } from "@/lib/catalog";
+import { ambassadors, BRAND } from "@/lib/catalog";
 
 export const Route = createFileRoute("/squad")({ component: Squad });
 
@@ -47,7 +47,7 @@ function Squad() {
         </p>
         {sent ? (
           <p className="mt-6 text-fg">
-            Noted here. For a real reply, email hello@tapthat.fans.
+            Noted here. For a real reply, email {BRAND.email}.
           </p>
         ) : (
           <form
@@ -71,7 +71,7 @@ function Squad() {
             </div>
             <Button type="submit">Send application</Button>
             <p className="text-xs text-muted">
-              Saved in this browser only — for a real note, email hello@tapthat.fans.
+              Saved in this browser only — for a real note, email {BRAND.email}.
             </p>
           </form>
         )}

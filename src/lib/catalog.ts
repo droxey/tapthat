@@ -309,7 +309,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "My charm won’t scan. Help?",
-    a: "First-time NFC is fussy. On iPhone the hotspot is the bar across the top back; on Android it’s usually the middle of the back. iPhones scan better on the lock screen. Androids scan better unlocked on the home screen. Rub in a slow circle for a few seconds. Thick cases block the field — take them off. Still stuck? Write hello@tapthat.fans and we’ll replace a defective disc.",
+    a: `First-time NFC is fussy. On iPhone the hotspot is the bar across the top back; on Android it’s usually the middle of the back. iPhones scan better on the lock screen. Androids scan better unlocked on the home screen. Rub in a slow circle for a few seconds. Thick cases block the field — take them off. Still stuck? Write ${BRAND.email} and we’ll replace a defective disc.`,
   },
   {
     q: "Where are they used?",
@@ -318,7 +318,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Which phones are compatible?",
-    a: "Most modern phones speak NFC. Best experience: iPhone 11 with iOS 13 or later, or Android 6.0 and later. iPhone 7, 8, and X still scan with a dedicated reader app. Check your spec sheet if you’re unsure, or ask hello@tapthat.fans.",
+    a: `Most modern phones speak NFC. Best experience: iPhone 11 with iOS 13 or later, or Android 6.0 and later. iPhone 7, 8, and X still scan with a dedicated reader app. Check your spec sheet if you’re unsure, or ask ${BRAND.email}.`,
   },
   {
     q: "Do they need batteries?",
@@ -334,11 +334,11 @@ export const faqs: Faq[] = [
   },
   {
     q: "Can I return a charm?",
-    a: "Happiness guarantee. If you’re not satisfied, contact us within 14 days for a return or exchange.",
+    a: `Happiness guarantee. If you’re not satisfied, contact ${BRAND.email} within 14 days for a return or exchange.`,
   },
   {
     q: "How do I reach support?",
-    a: "hello@tapthat.fans — we answer. Or DM the socials in the footer.",
+    a: `${BRAND.email} — we answer. Or DM the socials in the footer.`,
   },
 ];
 

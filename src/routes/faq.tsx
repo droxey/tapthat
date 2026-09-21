@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { faqs } from "@/lib/catalog";
+import { faqs, BRAND } from "@/lib/catalog";
 
 export const Route = createFileRoute("/faq")({ component: FaqPage });
 
@@ -29,8 +29,8 @@ function FaqPage() {
         <h2 className="text-2xl font-bold">Can’t find it?</h2>
         <p className="mt-2">
           We answer questions at{" "}
-          <a className="font-bold underline" href="mailto:hello@tapthat.fans">
-            hello@tapthat.fans
+          <a className="font-bold underline" href={`mailto:${BRAND.email}`}>
+            {BRAND.email}
           </a>
           .
         </p>

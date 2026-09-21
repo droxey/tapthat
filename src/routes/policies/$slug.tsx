@@ -1,4 +1,5 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
+import { BRAND } from "@/lib/catalog";
 
 const pages: Record<string, { title: string; body: string[] }> = {
   privacy: {
@@ -6,7 +7,7 @@ const pages: Record<string, { title: string; body: string[] }> = {
     body: [
       "TapThat does not sell personal data to third parties. Memories, photos, and socials you add to a charm stay in the app under the visibility you chose: public to the floor, or private to people who physically tap the disc.",
       "We do not use charms to track your location. Places on a journey are typed in by holders.",
-      "Account and order emails are used to fulfill shop orders and product updates you opted into. You can write hello@tapthat.fans to delete a card or a memory.",
+      `Account and order emails are used to fulfill shop orders and product updates you opted into. You can write ${BRAND.email} to delete a card or a memory.`,
     ],
   },
   terms: {
@@ -21,7 +22,7 @@ const pages: Record<string, { title: string; body: string[] }> = {
     title: "Shipping & returns",
     body: [
       "Continental USA: 3–7 business days standard, 2–4 with priority. We pack from a single US location.",
-      "Returns: contact hello@tapthat.fans within 14 days. Defective discs are replaced. Custom partner runs over 200 units are made to order and are not returnable unless defective.",
+      `Returns: contact ${BRAND.email} within 14 days. Defective discs are replaced. Custom partner runs over 200 units are made to order and are not returnable unless defective.`,
     ],
   },
 };

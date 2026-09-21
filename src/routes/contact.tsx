@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { BRAND } from "@/lib/catalog";
 
 export const Route = createFileRoute("/contact")({ component: Contact });
 
@@ -14,14 +15,14 @@ function Contact() {
       <h1 className="text-5xl tracking-tight">Contact</h1>
       <p className="mt-3 text-muted">
         Support, press, and everything else:{" "}
-        <a className="text-fg" href="mailto:hello@tapthat.fans">
-          hello@tapthat.fans
+        <a className="text-fg" href={`mailto:${BRAND.email}`}>
+          {BRAND.email}
         </a>
         . Or send a note here.
       </p>
       {sent ? (
         <p className="mt-10 text-fg">
-          Noted here. For a real reply, email hello@tapthat.fans.
+          Noted here. For a real reply, email {BRAND.email}.
         </p>
       ) : (
         <form
@@ -45,7 +46,7 @@ function Contact() {
           </div>
           <Button type="submit">Send</Button>
           <p className="text-xs text-muted">
-            Saved in this browser only — for a real note, email hello@tapthat.fans.
+            Saved in this browser only — for a real note, email {BRAND.email}.
           </p>
         </form>
       )}
