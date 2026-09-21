@@ -87,13 +87,13 @@ export const NAV = [
 
 export const products: Product[] = [
   {
-    slug: "afters-ghost",
-    name: "Pool Ghost Charms",
+    slug: "afters-fans",
+    name: "Pool Fans Charms",
 
     price: 1650,
     compareAt: 4950,
-    image: "/products/ghost.jpg",
-    gallery: ["/products/ghost.jpg", "/products/pack-3.jpg", "/images/tap.jpg"],
+    image: "/products/fans.jpg",
+    gallery: ["/products/fans.jpg", "/products/pack-3.jpg", "/images/tap.jpg"],
     category: "charms",
     blurb: "Milky enamel for the last lounge of the night. Built for pool afters.",
 
@@ -291,7 +291,7 @@ export const quotes = [
     handle: "@mclaughlin",
   },
   {
-    text: "Taking this little ghost to every pineapple weekend this year.",
+    text: "Taking Little Fans to every pineapple weekend this year.",
 
     name: "Hope",
     handle: "@hopefuldaydreams",
@@ -352,7 +352,7 @@ export const howSteps = [
   {
     n: "02",
     title: "Open the link that appears",
-    body: "Your phone offers a magic link. Open it. You’ll land in the TapThat app — some phones open it on their own. No disc yet? Try /t/TT-GHOST-004.",
+    body: "Your phone offers a magic link. Open it. You’ll land in the TapThat app — some phones open it on their own. No disc yet? Try /t/TT-FANS-004.",
     image: "/images/tap.jpg",
   },
   {
@@ -371,11 +371,11 @@ export const howSteps = [
 
 export const charms: Charm[] = [
   {
-    id: "ghost-004",
-    name: "Little Ghost",
-    code: "TT-GHOST-004",
+    id: "fans-004",
+    name: "Little Fans",
+    code: "TT-FANS-004",
     visibility: "public",
-    image: "/products/ghost.jpg",
+    image: "/products/fans.jpg",
     holders: 11,
     events: 6,
     origin: "Lido Afters, Caribbean",
@@ -461,14 +461,14 @@ export const memories: Memory[] = [
   },
   {
     id: "m3",
-    charmId: "ghost-004",
+    charmId: "fans-004",
     author: "Julian Adeyemi",
     handle: "@julian",
     avatar: "/people/julian.jpg",
     at: "2026-07-11T16:05:00",
     place: "Resort Takeover",
     event: "Jamaica",
-    note: "Pinned to a tote between two palapas. The ghost wanted daylight for once.",
+    note: "Pinned to a tote between two palapas. Little Fans wanted daylight for once.",
 
     photo: "/people/julian.jpg",
   },
@@ -513,7 +513,7 @@ export const memories: Memory[] = [
   },
   {
     id: "m7",
-    charmId: "ghost-004",
+    charmId: "fans-004",
     author: "Sofia Reyes",
     handle: "@sofia",
     avatar: "/people/sofia.jpg",
@@ -521,8 +521,8 @@ export const memories: Memory[] = [
     place: "Lido Afters",
     event: "Caribbean",
 
-    note: "Named it Little Ghost. Don’t make it famous.",
-    photo: "/products/ghost.jpg",
+    note: "Named it Little Fans. Don’t make it famous.",
+    photo: "/products/fans.jpg",
   },
   {
     id: "m8",
@@ -599,7 +599,7 @@ export const posts: Post[] = [
     image: "/products/bracelet.jpg",
     body: [
       "One charm on a black cord is enough. Two if they’re a pair. A full stack reads as a stall, not a night.",
-      "Pin the ghost to a jacket lining if you want it found. Put LIVE on the outside if you want it tapped.",
+      "Pin Little Fans to a jacket lining if you want it found. Put LIVE on the outside if you want it tapped.",
     ],
   },
 ];

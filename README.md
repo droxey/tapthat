@@ -18,7 +18,7 @@ npm run typecheck
 
 ## Demo limits
 
-Auth is off. Cart, orders, newsletter, and taps live in `localStorage`. Physical discs would open a magic link at `/t/<CODE>` (try `/t/TT-GHOST-004`).
+Auth is off. Cart, orders, newsletter, and taps live in `localStorage`. Physical discs would open a magic link at `/t/<CODE>` (try `/t/TT-FANS-004`).
 
 ## Clone map
 

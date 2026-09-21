@@ -15,7 +15,7 @@ export type SocialHeadInput = {
   description: string;
   /** Site path ("/shop") or absolute URL */
   path?: string;
-  /** Absolute URL or site path ("/products/ghost.jpg") */
+  /** Absolute URL or site path ("/products/fans.jpg") */
   image?: string;
   imageAlt?: string;
   type?: string;

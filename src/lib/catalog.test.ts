@@ -10,8 +10,8 @@ import {
 } from "./catalog.ts";
 
 describe("productBySlug", () => {
-  it("returns afters-ghost at 1650 cents", () => {
-    const product = productBySlug("afters-ghost");
+  it("returns afters-fans at 1650 cents", () => {
+    const product = productBySlug("afters-fans");
     assert.equal(product?.price, 1650);
   });
 
@@ -21,9 +21,9 @@ describe("productBySlug", () => {
 });
 
 describe("charmById", () => {
-  it("returns ghost-004 as a public charm with its code", () => {
-    const charm = charmById("ghost-004");
-    assert.equal(charm?.code, "TT-GHOST-004");
+  it("returns fans-004 as a public charm with its code", () => {
+    const charm = charmById("fans-004");
+    assert.equal(charm?.code, "TT-FANS-004");
     assert.equal(charm?.visibility, "public");
   });
 
@@ -40,8 +40,8 @@ describe("memoriesFor", () => {
     );
   });
 
-  it("sorts ghost-004 memories descending by at", () => {
-    const times = memoriesFor("ghost-004").map((m) => +new Date(m.at));
+  it("sorts fans-004 memories descending by at", () => {
+    const times = memoriesFor("fans-004").map((m) => +new Date(m.at));
     assert.equal(times.length >= 2, true);
     assert.deepEqual(
       times,
@@ -52,19 +52,19 @@ describe("memoriesFor", () => {
 
 describe("relatedProducts", () => {
   it("returns at most 3 products and never the source slug", () => {
-    const related = relatedProducts("afters-ghost");
+    const related = relatedProducts("afters-fans");
     assert.equal(related.length <= 3, true);
     assert.equal(
-      related.some((p) => p.slug === "afters-ghost"),
+      related.some((p) => p.slug === "afters-fans"),
       false,
     );
   });
 });
 
 describe("charmByCode", () => {
-  it("matches ghost-004 regardless of case", () => {
-    assert.equal(charmByCode("tt-ghost-004")?.id, "ghost-004");
-    assert.equal(charmByCode("TT-GHOST-004")?.id, "ghost-004");
+  it("matches fans-004 regardless of case", () => {
+    assert.equal(charmByCode("tt-fans-004")?.id, "fans-004");
+    assert.equal(charmByCode("TT-FANS-004")?.id, "fans-004");
   });
 
   it("returns undefined for an unknown code", () => {

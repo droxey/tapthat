@@ -32,8 +32,8 @@ describe("cartCount", () => {
   });
 
   it("sums quantities across lines", () => {
-    assert.equal(cartCount([line("afters-ghost", 2)]), 2);
-    assert.equal(cartCount([line("afters-ghost", 1), line("charms-10", 1)]), 2);
+    assert.equal(cartCount([line("afters-fans", 2)]), 2);
+    assert.equal(cartCount([line("afters-fans", 1), line("charms-10", 1)]), 2);
   });
 });
 
@@ -42,20 +42,20 @@ describe("cartSubtotal", () => {
     assert.equal(cartSubtotal([]), 0);
   });
 
-  it("multiplies afters-ghost price by qty", () => {
-    assert.equal(cartSubtotal([line("afters-ghost", 2)]), 1650 * 2);
+  it("multiplies afters-fans price by qty", () => {
+    assert.equal(cartSubtotal([line("afters-fans", 2)]), 1650 * 2);
   });
 
   it("sums two known products", () => {
     assert.equal(
-      cartSubtotal([line("afters-ghost", 1), line("charms-10", 1)]),
+      cartSubtotal([line("afters-fans", 1), line("charms-10", 1)]),
       1650 + 3899,
     );
   });
 
   it("treats an unknown slug as 0", () => {
     assert.equal(
-      cartSubtotal([line("afters-ghost", 1), line("does-not-exist", 4)]),
+      cartSubtotal([line("afters-fans", 1), line("does-not-exist", 4)]),
       1650,
     );
   });

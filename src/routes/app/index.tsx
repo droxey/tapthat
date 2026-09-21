@@ -35,8 +35,8 @@ function AppHome() {
           <h1 className="mt-2 text-5xl tracking-tight">The floor</h1>
           <p className="mt-3 max-w-xl text-muted">
             Public moments from charms in the wild. Tap a disc in real life, or open{" "}
-            <a href="/t/TT-GHOST-004" className="font-bold underline">
-              /t/TT-GHOST-004
+            <a href="/t/TT-FANS-004" className="font-bold underline">
+              /t/TT-FANS-004
             </a>{" "}
             to simulate one.
           </p>
