@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { cartCount, cartSubtotal, useCart } from "@/lib/cart";
+import { cartCount, cartSubtotal, parseQtyInput, useCart } from "@/lib/cart";
 import { productBySlug } from "@/lib/catalog";
 import { useLocalApp } from "@/lib/local-app";
 import { formatMoney } from "@/lib/utils";
@@ -13,17 +13,17 @@ export const Route = createFileRoute("/cart")({ component: Cart });
 function Cart() {
   const { lines, setQty, remove, clear } = useCart();
   const placeOrder = useLocalApp((s) => s.placeOrder);
-  const [orderId, setOrderId] = useState<string | null>(null);
+  const [receipt, setReceipt] = useState<{ id: string; email: string } | null>(null);
   const subtotal = cartSubtotal(lines);
 
-  if (orderId) {
+  if (receipt) {
     return (
       <main className="mx-auto max-w-xl px-4 py-20 text-center">
         <p className="text-xs uppercase tracking-[0.28em] text-subtle">Order placed</p>
-        <h1 className="mt-3 text-4xl">{orderId}</h1>
+        <h1 className="mt-3 text-4xl">{receipt.id}</h1>
         <p className="mt-4 text-muted">
-          This is a preview checkout — no charge. We’ll email packing notes to the address you
-          left.
+          Demo checkout — nothing was charged and nothing was emailed. This order is saved in this
+          browser for {receipt.email}.
         </p>
         <Button className="mt-8" asChild>
           <Link to="/shop">Keep shopping</Link>
@@ -69,7 +69,11 @@ function Cart() {
                         type="number"
                         min={1}
                         value={l.qty}
-                        onChange={(e) => setQty(l.slug, l.variantId, Number(e.target.value))}
+                        onChange={(e) => {
+                          const next = parseQtyInput(e.target.value);
+                          if (next === null) return;
+                          setQty(l.slug, l.variantId, next);
+                        }}
                         className="ml-2 h-9 w-16 rounded-base border-2 border-border bg-secondary-background px-2 text-sm tabular-nums"
 
                       />
@@ -99,22 +103,27 @@ function Cart() {
           className="mt-6 grid gap-3"
           onSubmit={(e) => {
             e.preventDefault();
-            const id = placeOrder(subtotal);
+            const fd = new FormData(e.currentTarget);
+            const email = String(fd.get("email") ?? "").trim();
+            const name = String(fd.get("name") ?? "").trim();
+            const address = String(fd.get("address") ?? "").trim();
+            if (!email || !name || !address) return;
+            const id = placeOrder({ total: subtotal, email, name, address });
             clear();
-            setOrderId(id);
+            setReceipt({ id, email });
           }}
         >
           <div className="grid gap-1">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" required />
+            <Input id="email" name="email" type="email" required />
           </div>
           <div className="grid gap-1">
             <Label htmlFor="name">Name</Label>
-            <Input id="name" required />
+            <Input id="name" name="name" required />
           </div>
           <div className="grid gap-1">
-            <Label htmlFor="addr">Address</Label>
-            <Input id="addr" required />
+            <Label htmlFor="address">Address</Label>
+            <Input id="address" name="address" required />
           </div>
           <Button type="submit" className="mt-2">
             Place order

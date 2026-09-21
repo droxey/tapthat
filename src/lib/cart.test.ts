@@ -13,7 +13,7 @@ registerHooks({
   },
 });
 
-const { cartCount, cartSubtotal } = await import("./cart.ts");
+const { cartCount, cartSubtotal, parseQtyInput } = await import("./cart.ts");
 
 type CartLine = {
   slug: string;
@@ -58,5 +58,21 @@ describe("cartSubtotal", () => {
       cartSubtotal([line("afters-ghost", 1), line("does-not-exist", 4)]),
       1650,
     );
+  });
+});
+
+describe("parseQtyInput", () => {
+  it("ignores empty and non-numeric input", () => {
+    assert.equal(parseQtyInput(""), null);
+    assert.equal(parseQtyInput("   "), null);
+    assert.equal(parseQtyInput("abc"), null);
+  });
+
+  it("returns 0 from a real zero so the line can be removed", () => {
+    assert.equal(parseQtyInput("0"), 0);
+  });
+
+  it("returns a positive quantity", () => {
+    assert.equal(parseQtyInput("3"), 3);
   });
 });

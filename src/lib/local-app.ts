@@ -16,17 +16,41 @@ export type Profile = {
   note: string;
 };
 
+export type Order = {
+  id: string;
+  at: string;
+  total: number;
+  email: string;
+  name: string;
+  address: string;
+};
+
+export function createOrder(
+  total: number,
+  contact: { email: string; name: string; address: string },
+): Order {
+  const id = `TT-${Date.now().toString(36).toUpperCase()}`;
+  return {
+    id,
+    at: new Date().toISOString(),
+    total,
+    email: contact.email,
+    name: contact.name,
+    address: contact.address,
+  };
+}
+
 type AppLocal = {
   profile: Profile;
   follows: string[];
   memories: LocalMemory[];
   newsletter: string[];
-  orders: { id: string; at: string; total: number }[];
+  orders: Order[];
   setProfile: (p: Partial<Profile>) => void;
   follow: (id: string) => void;
   addMemory: (m: Omit<LocalMemory, "id" | "at">) => LocalMemory;
   subscribe: (email: string) => void;
-  placeOrder: (total: number) => string;
+  placeOrder: (input: { total: number; email: string; name: string; address: string }) => string;
 };
 
 export const useLocalApp = create<AppLocal>()(
@@ -58,10 +82,10 @@ export const useLocalApp = create<AppLocal>()(
           set({ newsletter: [...get().newsletter, email] });
         }
       },
-      placeOrder: (total) => {
-        const id = `TT-${Date.now().toString(36).toUpperCase()}`;
-        set({ orders: [{ id, at: new Date().toISOString(), total }, ...get().orders] });
-        return id;
+      placeOrder: (input) => {
+        const row = createOrder(input.total, input);
+        set({ orders: [row, ...get().orders] });
+        return row.id;
       },
     }),
     { name: "tapthat-local" },

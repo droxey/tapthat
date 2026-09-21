@@ -9,6 +9,14 @@ export type CartLine = {
   qty: number;
 };
 
+/** Empty or non-numeric input is ignored. 0 or below means remove the line. */
+export function parseQtyInput(raw: string): number | null {
+  if (raw.trim() === "") return null;
+  const n = Number(raw);
+  if (!Number.isFinite(n)) return null;
+  return n;
+}
+
 type CartState = {
   lines: CartLine[];
   add: (line: Omit<CartLine, "qty">, qty?: number) => void;
@@ -38,6 +46,7 @@ export const useCart = create<CartState>()(
         set({ lines: [...get().lines, { ...line, qty }] });
       },
       setQty: (slug, variantId, qty) => {
+        if (Number.isNaN(qty) || !Number.isFinite(qty)) return;
         if (qty <= 0) {
           set({
             lines: get().lines.filter((l) => !(l.slug === slug && l.variantId === variantId)),

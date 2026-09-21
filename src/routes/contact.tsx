@@ -20,7 +20,9 @@ function Contact() {
         . Or send a note here.
       </p>
       {sent ? (
-        <p className="mt-10 text-fg">Received. We’ll write back.</p>
+        <p className="mt-10 text-fg">
+          Noted here. For a real reply, email hello@tapthat.fans.
+        </p>
       ) : (
         <form
           className="mt-10 grid gap-4"
@@ -42,6 +44,9 @@ function Contact() {
             <Textarea id="m" required />
           </div>
           <Button type="submit">Send</Button>
+          <p className="text-xs text-muted">
+            Saved in this browser only — for a real note, email hello@tapthat.fans.
+          </p>
         </form>
       )}
     </main>

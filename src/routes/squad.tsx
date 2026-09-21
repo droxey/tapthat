@@ -46,7 +46,9 @@ function Squad() {
           first if you want the long version.
         </p>
         {sent ? (
-          <p className="mt-6 text-fg">Application in. If it’s a yes, you’ll hear from us.</p>
+          <p className="mt-6 text-fg">
+            Noted here. For a real reply, email hello@tapthat.fans.
+          </p>
         ) : (
           <form
             className="mt-8 grid max-w-xl gap-4"
@@ -68,6 +70,9 @@ function Squad() {
               <Textarea id="r" required placeholder="Festivals, afters, fairs…" />
             </div>
             <Button type="submit">Send application</Button>
+            <p className="text-xs text-muted">
+              Saved in this browser only — for a real note, email hello@tapthat.fans.
+            </p>
           </form>
         )}
       </section>
