@@ -1,0 +1,1 @@
+Stripped NFC lettering from: hero.jpg, scan.jpg, tap.jpg, og.jpg, products/fans.jpg, products/heart.jpg, products/bracelet.jpg, products/unicorn.jpg. Style preserved; wifi discs kept.
