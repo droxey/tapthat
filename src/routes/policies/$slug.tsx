@@ -6,17 +6,17 @@ const pages: Record<string, { title: string; body: string[] }> = {
   privacy: {
     title: "Privacy policy",
     body: [
-      "TapThat does not sell personal data to third parties. Memories, photos, and socials you add to a charm stay in the app under the visibility you chose: public to the floor, or private to people who physically tap the disc.",
-      "We do not use charms to track your location. Places on a journey are typed in by holders.",
+      "TapThat does not sell personal data to third parties. Memories, photos, and socials you add to a bead stay in the app under the visibility you chose: public to the floor, or private to people who physically tap the disc.",
+      "We do not use beads to track your location. Places on a journey are typed in by holders.",
       `Account and order emails are used to fulfill shop orders and product updates you opted into. You can write ${BRAND.email} to delete a card or a memory.`,
     ],
   },
   terms: {
     title: "Terms of service",
     body: [
-      "The shop, app, and charms are provided as-is for personal and event use. Custom partner work is covered by a separate quote.",
-      "You are responsible for what you write on a public charm. Don’t leave anything you wouldn’t say to the next person holding it.",
-      "Unused product may be returned within 14 days. Activated charms that have entered a public journey cannot be restocked as new.",
+      "The shop, app, and beads are provided as-is for personal and event use. Custom partner work is covered by a separate quote.",
+      "You are responsible for what you write on a public bead. Don’t leave anything you wouldn’t say to the next person holding it.",
+      "Unused product may be returned within 14 days. Activated beads that have entered a public journey cannot be restocked as new.",
     ],
   },
   shipping: {

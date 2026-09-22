@@ -11,8 +11,8 @@ import { pageTitle, socialHead } from "@/lib/seo";
 export const Route = createFileRoute("/app/")({
   head: () =>
     socialHead({
-      title: pageTitle("The floor", "charms, journeys, social cards"),
-      description: "Open charms, follow journeys, and leave the next moment on the floor.",
+      title: pageTitle("The floor", "beads, journeys, social cards"),
+      description: "Open beads, follow journeys, and leave the next moment on the floor.",
       path: "/app",
       image: "/images/afters.jpg",
       imageAlt: "TapThat app. The public floor.",
@@ -45,7 +45,7 @@ function AppHome() {
           <p className="text-xs uppercase tracking-[0.28em] text-subtle">Web app</p>
           <h1 className="mt-2 text-5xl tracking-tight">The floor</h1>
           <p className="mt-3 max-w-xl text-muted">
-            Public moments from charms in the wild. Tap a disc in real life, or open{" "}
+            Public moments from beads in the wild. Tap a disc in real life, or open{" "}
             <a href="/t/TT-FANS-004" className="font-bold underline">
               /t/TT-FANS-004
             </a>{" "}
@@ -88,7 +88,7 @@ function AppHome() {
         <aside className="space-y-6">
           <div className="rounded-base border-2 border-border bg-secondary-background shadow-shadow p-5">
             <h2 className="text-xl">Your social card</h2>
-            <p className="mt-1 text-xs text-muted">Shown when someone taps a charm you activated.</p>
+            <p className="mt-1 text-xs text-muted">Shown when someone taps a bead you activated.</p>
             <form
               className="mt-4 grid gap-3"
               onSubmit={(e) => {
@@ -125,7 +125,7 @@ function AppHome() {
           </div>
 
           <div className="rounded-base border-2 border-border bg-secondary-background shadow-shadow p-5">
-            <h2 className="text-xl">Live charms</h2>
+            <h2 className="text-xl">Live beads</h2>
             <ul className="mt-3 space-y-2">
               {charms.map((c) => (
                 <li key={c.id}>

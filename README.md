@@ -1,6 +1,6 @@
 # TapThat
 
-NFC enamel charms for lifestyle events — cruises, resorts, pineapple weekends. Tap a disc, leave a moment, follow the charm after it leaves your hand. Inspired by [Soulstone](https://soulstone.io); this is a demo clone with no real payments.
+NFC enamel beads for lifestyle events — cruises, resorts, pineapple weekends. Tap a disc, leave a moment, follow the bead after it leaves your hand. Inspired by [Soulstone](https://soulstone.io); this is a demo clone with no real payments.
 
 ## Live
 

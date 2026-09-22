@@ -13,20 +13,20 @@ export const Route = createFileRoute("/app/$charmId")({
   validateSearch: (s: Record<string, unknown>): { tap?: boolean } =>
     s.tap === true || s.tap === "true" || s.tap === 1 ? { tap: true } : {},
   head: ({ params }) => {
-    const charm = charmById(params.charmId);
-    if (!charm) {
+    const bead = charmById(params.charmId);
+    if (!bead) {
       return socialHead({
-        title: pageTitle("Charm not found"),
+        title: pageTitle("Bead not found"),
         description: DEFAULT_DESCRIPTION,
         path: `/app/${params.charmId}`,
       });
     }
     return socialHead({
-      title: pageTitle(`${charm.name} · ${charm.code}`, charm.origin),
-      description: `${charm.origin}. ${charm.holders} holders, ${charm.events} events. ${charm.visibility} journey.`,
-      path: `/app/${charm.id}`,
-      image: charm.image,
-      imageAlt: charm.name,
+      title: pageTitle(`${bead.name} · ${bead.code}`, bead.origin),
+      description: `${bead.origin}. ${bead.holders} holders, ${bead.events} events. ${bead.visibility} journey.`,
+      path: `/app/${bead.id}`,
+      image: bead.image,
+      imageAlt: bead.name,
     });
   },
   component: CharmPage,
@@ -34,16 +34,16 @@ export const Route = createFileRoute("/app/$charmId")({
 
 function CharmPage() {
   const { charmId } = Route.useParams();
-  const charm = charmById(charmId);
-  if (!charm) throw notFound();
-  const seeded = memoriesFor(charm.id);
+  const bead = charmById(charmId);
+  if (!bead) throw notFound();
+  const seeded = memoriesFor(bead.id);
   const allLocal = useLocalApp((s) => s.memories);
-  const local = allLocal.filter((m) => m.charmId === charm.id);
+  const local = allLocal.filter((m) => m.charmId === bead.id);
   const follow = useLocalApp((s) => s.follow);
   const follows = useLocalApp((s) => s.follows);
   const addMemory = useLocalApp((s) => s.addMemory);
   const profile = useLocalApp((s) => s.profile);
-  const following = follows.includes(charm.id);
+  const following = follows.includes(bead.id);
   const { tap } = Route.useSearch();
   const [open, setOpen] = useState(Boolean(tap));
   const [note, setNote] = useState("");
@@ -55,26 +55,26 @@ function CharmPage() {
         <Link to="/app" className="hover:text-fg">
           App
         </Link>{" "}
-        / {charm.code}
+        / {bead.code}
       </p>
       <div className="mt-6 overflow-hidden rounded-base border-2 border-border bg-secondary-background shadow-shadow">
 
-        <img src={charm.image} alt={charm.name} className="aspect-[16/9] w-full object-cover" />
+        <img src={bead.image} alt={bead.name} className="aspect-[16/9] w-full object-cover" />
         <div className="p-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
-              <h1 className="text-4xl tracking-tight">{charm.name}</h1>
+              <h1 className="text-4xl tracking-tight">{bead.name}</h1>
               <p className="mt-1 text-sm text-muted">
-                Started {charm.origin} · {charm.holders} holders · {charm.events} rooms
+                Started {bead.origin} · {bead.holders} holders · {bead.events} rooms
               </p>
             </div>
-            <Badge tone={charm.visibility === "private" ? "accent" : "muted"}>
-              {charm.visibility}
+            <Badge tone={bead.visibility === "private" ? "accent" : "muted"}>
+              {bead.visibility}
             </Badge>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button onClick={() => setOpen((v) => !v)}>Simulate tap</Button>
-            <Button variant="outline" onClick={() => follow(charm.id)}>
+            <Button variant="outline" onClick={() => follow(bead.id)}>
               {following ? "Following" : "Follow journey"}
             </Button>
           </div>
@@ -85,7 +85,7 @@ function CharmPage() {
                 e.preventDefault();
                 if (!note.trim()) return;
                 addMemory({
-                  charmId: charm.id,
+                  charmId: bead.id,
                   note: note.trim(),
                   place: place.trim() || "Somewhere tonight",
                 });

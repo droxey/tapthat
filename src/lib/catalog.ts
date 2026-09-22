@@ -88,7 +88,7 @@ export const NAV = [
 export const products: Product[] = [
   {
     slug: "afters-fans",
-    name: "Fan Charms",
+    name: "Fan Beads",
 
     price: 1650,
     compareAt: 4950,
@@ -107,7 +107,7 @@ export const products: Product[] = [
   },
   {
     slug: "heart-hands",
-    name: "Heart Hands Charms",
+    name: "Heart Hands Beads",
     price: 1650,
     compareAt: 4950,
     image: "/products/heart.jpg",
@@ -138,7 +138,7 @@ export const products: Product[] = [
   },
   {
     slug: "live-charms",
-    name: "LIVE Charms",
+    name: "LIVE Beads",
     price: 1650,
     compareAt: 4950,
     image: "/products/live.jpg",
@@ -156,7 +156,7 @@ export const products: Product[] = [
   },
   {
     slug: "charms-10",
-    name: "Tap Charms 10-Pack",
+    name: "Tap Beads 10-Pack",
     price: 3899,
     compareAt: 4999,
     image: "/products/pack-10.jpg",
@@ -164,7 +164,7 @@ export const products: Product[] = [
     category: "packs",
     blurb: "Enough to trade a whole weekend and still keep one.",
     description:
-      "Ten mixed enamel charms, one silver disc each. For a cruise week or a friend group that shows up.",
+      "Ten mixed enamel beads, one silver disc each. For a cruise week or a friend group that shows up.",
 
     variants: [
       { id: "mixed", name: "Mixed", available: true },
@@ -176,14 +176,14 @@ export const products: Product[] = [
   },
   {
     slug: "charms-3",
-    name: "Tap Charms 3-Pack",
+    name: "Tap Beads 3-Pack",
     price: 1499,
     image: "/products/pack-3.jpg",
     gallery: ["/products/pack-3.jpg", "/images/tap.jpg"],
     category: "packs",
     blurb: "You, a friend, and the one you leave behind.",
     description:
-      "Three enamel charms. Keep one, trade one, follow the third. Any modern phone.",
+      "Three enamel beads. Keep one, trade one, follow the third. Any modern phone.",
     variants: [
       { id: "mixed", name: "Mixed", available: true },
       { id: "gradient", name: "Gradient", available: true },
@@ -194,13 +194,13 @@ export const products: Product[] = [
   },
   {
     slug: "charms-5",
-    name: "Tap Charms 5-Pack",
+    name: "Tap Beads 5-Pack",
     price: 2299,
     image: "/products/pack-5.jpg",
     gallery: ["/products/pack-5.jpg", "/products/pack-3.jpg"],
     category: "packs",
-    blurb: "The table pack. Five charms, five stories.",
-    description: "Five mixed enamel charms for a crew. Trade across a night and watch the journeys split.",
+    blurb: "The table pack. Five beads, five stories.",
+    description: "Five mixed enamel beads for a crew. Trade across a night and watch the journeys split.",
     variants: [
       { id: "mixed", name: "Mixed", available: true },
       { id: "gradient", name: "Gradient", available: true },
@@ -217,9 +217,9 @@ export const products: Product[] = [
     image: "/products/bracelet.jpg",
     gallery: ["/products/bracelet.jpg", "/images/hero.jpg", "/images/afters.jpg"],
     category: "wear",
-    blurb: "A cord, three charms, ready to leave the house.",
+    blurb: "A cord, three beads, ready to leave the house.",
     description:
-      "Hand-tied black cord with three live NFC charms already on it. Wear it, tap it, trade a charm off it. One size. Knots adjust.",
+      "Hand-tied black cord with three live NFC beads already on it. Wear it, tap it, trade a bead off it. One size. Knots adjust.",
     variants: [
       { id: "ink", name: "Ink cord", available: true },
       { id: "sand", name: "Sand cord", available: true },
@@ -228,7 +228,7 @@ export const products: Product[] = [
   },
   {
     slug: "unicorn",
-    name: "Golden Pineapple Charms",
+    name: "Golden Pineapple Beads",
 
     price: 1650,
     compareAt: 4950,
@@ -237,7 +237,7 @@ export const products: Product[] = [
     category: "charms",
     blurb: "The fruit on the table. Yellow enamel, hidden disc.",
     description:
-      "Chunky pineapple charms with a silver tap disc. The sign people look for. Pack of two.",
+      "Chunky pineapple beads with a silver tap disc. The sign people look for. Pack of two.",
 
     variants: [
       { id: "slick", name: "Slick", available: true },
@@ -259,7 +259,7 @@ export const events: EventMark[] = [
 
 
 export const press = [
-  { name: "Room Notes", line: "The charm that outlives the guest list." },
+  { name: "Room Notes", line: "The bead that outlives the guest list." },
   { name: "Floor Copy", line: "Friendship jewelry with a memory." },
   { name: "Fanfare", line: "Tap once. The night keeps going." },
   { name: "After Hours", line: "Built for people who still trade things." },
@@ -273,7 +273,7 @@ export const quotes = [
     handle: "@disc0lex",
   },
   {
-    text: "We traded on the lido and I followed the charm to three ports. It feels like a secret that wants to be kept.",
+    text: "We traded on the lido and I followed the bead to three ports. It feels like a secret that wants to be kept.",
 
     name: "Camila",
     handle: "@clopezcoronado",
@@ -299,15 +299,15 @@ export const quotes = [
 
 export const faqs: Faq[] = [
   {
-    q: "How do Tap charms work?",
+    q: "How do Tap beads work?",
     a: "Tap the enamel disc with any phone. You land in the app. See what's inside, or add a note. After you trade it, the next person does the same.",
   },
   {
     q: "Do they track my location?",
-    a: "No. Charms cannot track you. You (or whoever holds them) type a place, a note, or a photo when you choose to leave a memory. The path is a history you write, not a GPS trail.",
+    a: "No. Beads cannot track you. You (or whoever holds them) type a place, a note, or a photo when you choose to leave a memory. The path is a history you write, not a GPS trail.",
   },
   {
-    q: "My charm won’t scan. Help?",
+    q: "My bead won’t scan. Help?",
     a: `First-time NFC is fussy. On iPhone the hotspot is the bar across the top back. On Android it's usually the middle of the back. iPhones scan better on the lock screen. Androids scan better unlocked on the home screen. Rub in a slow circle for a few seconds. Thick cases block the field. Take them off. Still stuck? Write ${BRAND.email} and we'll replace a defective disc.`,
   },
   {
@@ -332,7 +332,7 @@ export const faqs: Faq[] = [
     a: "We don't sell data, and we don't read anything you didn't put in the app. Public mode shares with the floor. Private mode is only people who physically tap the disc.",
   },
   {
-    q: "Can I return a charm?",
+    q: "Can I return a bead?",
     a: `If you're not satisfied, write ${BRAND.email} within 14 days. We'll sort a return or exchange.`,
   },
   {
@@ -344,7 +344,7 @@ export const faqs: Faq[] = [
 export const howSteps = [
   {
     n: "01",
-    title: "Tap the charm with your phone",
+    title: "Tap the bead with your phone",
     body: "Hold the top back of an iPhone, or the middle back of an Android, against the silver disc. A few seconds of contact is enough.",
     image: "/images/scan.jpg",
   },
@@ -357,13 +357,13 @@ export const howSteps = [
   {
     n: "03",
     title: "Name it and leave a moment",
-    body: "Name the charm, pick public or private, leave a note for whoever holds it next. If it's already live, you just add the next chapter.",
+    body: "Name the bead, pick public or private, leave a note for whoever holds it next. If it's already live, you just add the next chapter.",
     image: "/products/heart.jpg",
   },
   {
     n: "04",
     title: "Pass it on",
-    body: "Hand the charm over. Future notes land in the app. Tap someone's disc and you've got their card after the pool closes.",
+    body: "Hand the bead over. Future notes land in the app. Tap someone's disc and you've got their card after the pool closes.",
     image: "/images/afters.jpg",
   },
 ];
@@ -545,10 +545,10 @@ export const posts: Post[] = [
 
     date: "2026-04-20",
     author: "TapThat",
-    dek: "A short run of LIVE charms, 100+ unit pricing, and why we still answer email.",
+    dek: "A short run of LIVE beads, 100+ unit pricing, and why we still answer email.",
     image: "/images/hero.jpg",
     body: [
-      "Pineapple Week always empties the drawer. This year we held a two-day flash on the 10-pack and opened bulk quotes for rooms that want a charm on every wristband.",
+      "Pineapple Week always empties the drawer. This year we held a two-day flash on the 10-pack and opened bulk quotes for rooms that want a bead on every wristband.",
 
       "If you’re ordering for a house, a label, or a commemorative night, the Partner desk still starts at 200 units. The rest of us can just tap what’s already in the shop.",
     ],
@@ -561,7 +561,7 @@ export const posts: Post[] = [
     dek: "Not an influencer grid. A small list of fans who trade in public and report back.",
     image: "/people/mina.jpg",
     body: [
-      "Squad is how we stay honest. Ambassadors get early colorways, a private channel, and a job: tap in rooms we can’t be in, write what happened, and send the charm on.",
+      "Squad is how we stay honest. Ambassadors get early colorways, a private channel, and a job: tap in rooms we can’t be in, write what happened, and send the bead on.",
       "Applications stay open. We read every note. We do not ask for follower counts.",
     ],
   },
@@ -570,11 +570,11 @@ export const posts: Post[] = [
     title: "Three ways to never lose the person you just met",
     date: "2026-01-24",
     author: "TapThat",
-    dek: "A tap, a private charm, and a profile that works as a social card.",
+    dek: "A tap, a private bead, and a profile that works as a social card.",
     image: "/images/tap.jpg",
     body: [
-      "Phone numbers die in notes apps. A charm you both tapped does not. Leave a memory, keep it private, and the next time that disc is scanned you’re both still in the thread.",
-      "Public charms are for journeys. Private charms are for the table. Use both.",
+      "Phone numbers die in notes apps. A bead you both tapped does not. Leave a memory, keep it private, and the next time that disc is scanned you’re both still in the thread.",
+      "Public beads are for journeys. Private beads are for the table. Use both.",
     ],
   },
   {
@@ -591,13 +591,13 @@ export const posts: Post[] = [
   },
   {
     slug: "how-to-wear-a-charm",
-    title: "How to wear a charm without looking like merch",
+    title: "How to wear a bead without looking like merch",
     date: "2026-01-12",
     author: "Squad",
     dek: "Cord, pin, zipper pull. Pick one and leave the rest at home.",
     image: "/products/bracelet.jpg",
     body: [
-      "One charm on a black cord is enough. Two if they’re a pair. A full stack reads as a stall, not a night.",
+      "One bead on a black cord is enough. Two if they’re a pair. A full stack reads as a stall, not a night.",
       "Pin Fans to a jacket lining if you want it found. Put LIVE on the outside if you want it tapped.",
     ],
   },
@@ -609,7 +609,7 @@ export const ambassadors: Ambassador[] = [
     handle: "@mina",
     city: "Miami",
     role: "Pineapple Week",
-    bio: "Books the cabanas, then leaves the first memory on whatever charm is on the guest list.",
+    bio: "Books the cabanas, then leaves the first memory on whatever bead is on the guest list.",
 
     avatar: "/people/mina.jpg",
   },
@@ -627,7 +627,7 @@ export const ambassadors: Ambassador[] = [
     handle: "@julian",
     city: "Jamaica",
     role: "Resort Takeover",
-    bio: "Takes charms into daylight. Palapas, the walk between boats, the buffet line.",
+    bio: "Takes beads into daylight. Palapas, the walk between boats, the buffet line.",
 
     avatar: "/people/julian.jpg",
   },

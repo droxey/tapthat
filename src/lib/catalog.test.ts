@@ -21,10 +21,10 @@ describe("productBySlug", () => {
 });
 
 describe("charmById", () => {
-  it("returns fans-004 as a public charm with its code", () => {
-    const charm = charmById("fans-004");
-    assert.equal(charm?.code, "TT-FANS-004");
-    assert.equal(charm?.visibility, "public");
+  it("returns fans-004 as a public bead with its code", () => {
+    const bead = charmById("fans-004");
+    assert.equal(bead?.code, "TT-FANS-004");
+    assert.equal(bead?.visibility, "public");
   });
 
   it("returns ink-102 as private", () => {
@@ -33,7 +33,7 @@ describe("charmById", () => {
 });
 
 describe("memoriesFor", () => {
-  it("includes m8 on the private ink-102 charm", () => {
+  it("includes m8 on the private ink-102 bead", () => {
     assert.equal(
       memoriesFor("ink-102").some((m) => m.id === "m8"),
       true,

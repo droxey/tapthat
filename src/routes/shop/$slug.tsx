@@ -19,7 +19,7 @@ export const Route = createFileRoute("/shop/$slug")({
       });
     }
     return socialHead({
-      title: pageTitle(product.name, product.category === "packs" ? "charm pack" : product.category === "wear" ? "wearable" : product.category === "merch" ? "merch" : "NFC charm"),
+      title: pageTitle(product.name, product.category === "packs" ? "bead pack" : product.category === "wear" ? "wearable" : product.category === "merch" ? "merch" : "NFC bead"),
       description: product.blurb,
       path: `/shop/${product.slug}`,
       image: product.image,

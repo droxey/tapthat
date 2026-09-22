@@ -7,7 +7,7 @@ export const Route = createFileRoute("/ios")({
   head: () =>
     socialHead({
       title: pageTitle("iPhone app", "memories on every tap"),
-      description: "Memories in the charm, a social card on every tap, and a floor of public notes.",
+      description: "Memories in the bead, a social card on every tap, and a floor of public notes.",
       path: "/ios",
       image: "/images/scan.jpg",
       imageAlt: "TapThat for iPhone",
@@ -17,16 +17,16 @@ export const Route = createFileRoute("/ios")({
 
 const features = [
   {
-    t: "Store memories in the charm",
+    t: "Store memories in the bead",
     d: "Photos, notes, the place you were. Tapped from the disc on your wrist.",
   },
   {
     t: "See updates on what you traded",
-    d: "Follow a charm after it leaves your hand. Watch the next rooms write back.",
+    d: "Follow a bead after it leaves your hand. Watch the next rooms write back.",
   },
   {
     t: "A social card on every tap",
-    d: "Add handles and a note. Anyone who taps a charm you activated can find you.",
+    d: "Add handles and a note. Anyone who taps a bead you activated can find you.",
   },
   {
     t: "The public floor",
@@ -61,7 +61,7 @@ function Ios() {
         </div>
         <img
           src="/images/scan.jpg"
-          alt="Phone held to a wrist charm"
+          alt="Phone held to a wrist bead"
           className="aspect-[4/5] w-full object-cover"
         />
       </div>

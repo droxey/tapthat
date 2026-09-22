@@ -12,7 +12,7 @@ export const Route = createFileRoute("/squad")({
     socialHead({
       title: pageTitle("The Squad", "ambassadors who actually go out"),
       description:
-        "Not an influencer grid. A short list of fans who trade in public, write what happened, and send the charm on.",
+        "Not an influencer grid. A short list of fans who trade in public, write what happened, and send the bead on.",
       path: "/squad",
       image: ambassadors[0]?.avatar ?? "/people/mina.jpg",
       imageAlt: "TapThat Squad ambassadors",
@@ -29,7 +29,7 @@ function Squad() {
       <h1 className="mt-2 text-5xl tracking-tight md:text-6xl">The Squad</h1>
       <p className="mt-4 max-w-2xl text-lg text-muted">
         Not an influencer grid. A short list of fans who trade in public, write what happened, and
-        send the charm on. Early colorways, a private channel, no follower minimum.
+        send the bead on. Early colorways, a private channel, no follower minimum.
       </p>
 
       <div className="mt-14 grid gap-8 md:grid-cols-3">

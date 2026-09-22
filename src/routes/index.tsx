@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       description: DEFAULT_DESCRIPTION,
       path: "/",
       image: "/images/hero.jpg",
-      imageAlt: "TapThat charms on a cruise deck",
+      imageAlt: "TapThat beads on a cruise deck",
     }),
   component: Home,
 });
@@ -28,7 +28,7 @@ function Home() {
       <section className="mx-auto grid max-w-site items-center gap-10 px-4 py-12 lg:grid-cols-2 lg:py-16">
         <div>
           <p className="inline-flex rounded-base border-2 border-border bg-accent px-3 py-1 text-xs font-bold shadow-shadow">
-            Charms for cruises, resorts, pineapple weekends
+            Beads for cruises, resorts, pineapple weekends
           </p>
           <h1 className="mt-5 text-5xl font-bold leading-[0.95] tracking-tight md:text-7xl">
             Tap that.
@@ -42,7 +42,7 @@ function Home() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild>
-              <Link to="/shop">Shop charms</Link>
+              <Link to="/shop">Shop beads</Link>
             </Button>
             <Button variant="outline" asChild>
               <Link to="/how-it-works">How it works</Link>
@@ -52,7 +52,7 @@ function Home() {
         <div className="rotate-1">
           <img
             src="/images/hero.jpg"
-            alt="Pixel cruise deck with a pineapple charm bracelet"
+            alt="Pixel cruise deck with a pineapple bead bracelet"
 
             className="aspect-[4/3] w-full rounded-base border-2 border-border object-cover shadow-shadow"
           />

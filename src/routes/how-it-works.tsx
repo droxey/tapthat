@@ -10,7 +10,7 @@ export const Route = createFileRoute("/how-it-works")({
       description: "Tap the disc. Open the link. Leave a moment. Pass it on.",
       path: "/how-it-works",
       image: "/images/scan.jpg",
-      imageAlt: "How TapThat charms work",
+      imageAlt: "How TapThat beads work",
     }),
   component: HowItWorks,
 });

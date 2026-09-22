@@ -94,7 +94,7 @@ export function SiteHeader() {
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search charms, packs, hats…"
+            placeholder="Search beads, packs, hats…"
             aria-label="Search the shop"
           />
           <Button type="submit">Go</Button>

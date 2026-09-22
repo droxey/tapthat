@@ -4,28 +4,28 @@ import { DEFAULT_DESCRIPTION, pageTitle, socialHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/t/$code")({
   head: ({ params }) => {
-    const charm = charmByCode(params.code);
-    if (!charm) {
+    const bead = charmByCode(params.code);
+    if (!bead) {
       return socialHead({
-        title: pageTitle("Charm not found"),
+        title: pageTitle("Bead not found"),
         description: DEFAULT_DESCRIPTION,
         path: `/t/${params.code}`,
       });
     }
     return socialHead({
-      title: pageTitle(`${charm.name} · ${charm.code}`, "Tap to open"),
-      description: `Tap to open ${charm.name}, started at ${charm.origin}.`,
+      title: pageTitle(`${bead.name} · ${bead.code}`, "Tap to open"),
+      description: `Tap to open ${bead.name}, started at ${bead.origin}.`,
       path: `/t/${params.code}`,
-      image: charm.image,
-      imageAlt: charm.name,
+      image: bead.image,
+      imageAlt: bead.name,
     });
   },
   beforeLoad: ({ params }) => {
-    const charm = charmByCode(params.code);
-    if (!charm) throw notFound();
+    const bead = charmByCode(params.code);
+    if (!bead) throw notFound();
     throw redirect({
       to: "/app/$charmId",
-      params: { charmId: charm.id },
+      params: { charmId: bead.id },
       search: { tap: true },
     });
   },

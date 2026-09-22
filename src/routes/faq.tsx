@@ -7,11 +7,11 @@ import { pageTitle, socialHead } from "@/lib/seo";
 export const Route = createFileRoute("/faq")({
   head: () =>
     socialHead({
-      title: pageTitle("FAQ", "charms, scanning, shipping"),
-      description: "Answers about charms, scanning, shipping, and privacy.",
+      title: pageTitle("FAQ", "beads, scanning, shipping"),
+      description: "Answers about beads, scanning, shipping, and privacy.",
       path: "/faq",
       image: "/images/tap.jpg",
-      imageAlt: "Tapping a TapThat charm",
+      imageAlt: "Tapping a TapThat bead",
     }),
   component: FaqPage,
 });
@@ -20,7 +20,7 @@ function FaqPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="text-5xl font-bold tracking-tight">FAQ</h1>
-      <p className="mt-3 text-muted">Answers about charms, scanning, shipping, and privacy.</p>
+      <p className="mt-3 text-muted">Answers about beads, scanning, shipping, and privacy.</p>
       <div className="mt-6 rounded-base border-2 border-border bg-accent p-5 shadow-shadow">
         <p className="text-lg font-bold">Looking for a step-by-step?</p>
         <Button className="mt-3" asChild>

@@ -13,7 +13,7 @@ export const Route = createFileRoute("/cart")({
   head: () =>
     socialHead({
       title: pageTitle("Your bag"),
-      description: "Your TapThat bag. Enamel charms ready to trade.",
+      description: "Your TapThat bag. Enamel beads ready to trade.",
       path: "/cart",
       image: "/products/pack-3.jpg",
       imageAlt: "TapThat shopping bag",
@@ -50,7 +50,7 @@ function Cart() {
 
         <p className="mt-3 text-muted">A 3-pack is the smallest way in.</p>
         <Button className="mt-8" asChild>
-          <Link to="/shop">Shop charms</Link>
+          <Link to="/shop">Shop beads</Link>
         </Button>
       </main>
     );

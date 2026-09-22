@@ -10,7 +10,7 @@ export function SiteFooter() {
         <div>
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
-            Charms you tap. A night you keep. Trade it on the lido, at the palapa, or wherever
+            Beads you tap. A night you keep. Trade it on the lido, at the palapa, or wherever
             the pineapple is pointing.
           </p>
           <a className="mt-4 inline-block text-sm font-bold underline" href={`mailto:${BRAND.email}`}>
