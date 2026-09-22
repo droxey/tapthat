@@ -1,0 +1,51 @@
+name: apply-nfc-strip-art
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch cleaned frames
+        run: |
+          set -euo pipefail
+          curl -fsSL -o public/images/hero.jpg https://litter.catbox.moe/lr4752.jpg
+          curl -fsSL -o public/images/scan.jpg https://litter.catbox.moe/ewv3ku.jpg
+          curl -fsSL -o public/images/tap.jpg https://litter.catbox.moe/jypr7x.jpg
+          curl -fsSL -o public/og.jpg https://litter.catbox.moe/yi537i.jpg
+          curl -fsSL -o public/products/fans.jpg https://litter.catbox.moe/5i24aa.jpg
+          curl -fsSL -o public/products/heart.jpg https://litter.catbox.moe/w8bx10.jpg
+          curl -fsSL -o public/products/bracelet.jpg https://litter.catbox.moe/p6swz0.jpg
+          curl -fsSL -o public/products/unicorn.jpg https://litter.catbox.moe/zg7lxm.jpg
+          python3 - <<'PY'
+          from pathlib import Path
+          files = [
+            'public/images/hero.jpg',
+            'public/images/scan.jpg',
+            'public/images/tap.jpg',
+            'public/og.jpg',
+            'public/products/fans.jpg',
+            'public/products/heart.jpg',
+            'public/products/bracelet.jpg',
+            'public/products/unicorn.jpg',
+          ]
+          for f in files:
+            data = Path(f).read_bytes()
+            if data[:3] != b'\xff\xd8\xff':
+              raise SystemExit(f'{f} is not a jpeg ({data[:20]!r})')
+            print(f, len(data))
+          PY
+      - name: Commit frames
+        run: |
+          set -euo pipefail
+          git config user.name "Dani Roxberry"
+          git config user.email "dani@musexmachine.com"
+          git add public/images/hero.jpg public/images/scan.jpg public/images/tap.jpg public/og.jpg public/products/fans.jpg public/products/heart.jpg public/products/bracelet.jpg public/products/unicorn.jpg
+          if git diff --cached --quiet; then
+            echo "no image changes"
+            exit 0
+          fi
+          git commit -m "art: strip NFC lettering from pixel frames"
+          git push
